@@ -34,34 +34,47 @@ def sorteio_copa():
             dict_sel = {'País': dados_sel[0], 'Confederação': dados_sel[1],
                         'Nível': dados_sel[2], 'Sede?': dados_sel[3]}
 
-            if '10' in dict_sel.get('Nível'):
+            if 'sede' in dict_sel.get('Sede?'):
+                pais_sede = dict_sel
+
+            if ('10' in dict_sel.get('Nível') and 'sede'
+                    not in dict_sel.get('Sede?')):
                 lista10.append(dict_sel)
 
-            elif '9' in dict_sel.get('Nível'):
+            elif ('9' in dict_sel.get('Nível') and 'sede'
+                    not in dict_sel.get('Sede?')):
                 lista9.append(dict_sel)
 
-            elif '8' in dict_sel.get('Nível'):
+            elif ('8' in dict_sel.get('Nível') and 'sede'
+                    not in dict_sel.get('Sede?')):
                 lista8.append(dict_sel)
 
-            elif '7' in dict_sel.get('Nível'):
+            elif ('7' in dict_sel.get('Nível') and 'sede'
+                    not in dict_sel.get('Sede?')):
                 lista7.append(dict_sel)
 
-            elif '6' in dict_sel.get('Nível'):
+            elif ('6' in dict_sel.get('Nível') and 'sede'
+                  not in dict_sel.get('Sede?')):
                 lista6.append(dict_sel)
 
-            elif '5' in dict_sel.get('Nível'):
+            elif ('5' in dict_sel.get('Nível') and 'sede'
+                  not in dict_sel.get('Sede?')):
                 lista5.append(dict_sel)
 
-            elif '4' in dict_sel.get('Nível'):
+            elif ('4' in dict_sel.get('Nível') and 'sede'
+                  not in dict_sel.get('Sede?')):
                 lista4.append(dict_sel)
 
-            elif '3' in dict_sel.get('Nível'):
+            elif ('3' in dict_sel.get('Nível') and 'sede'
+                  not in dict_sel.get('Sede?')):
                 lista3.append(dict_sel)
 
-            elif '2' in dict_sel.get('Nível'):
+            elif ('2' in dict_sel.get('Nível') and 'sede'
+                  not in dict_sel.get('Sede?')):
                 lista2.append(dict_sel)
 
-            elif '1' in dict_sel.get('Nível'):
+            elif ('1' in dict_sel.get('Nível') and 'sede'
+                  not in dict_sel.get('Sede?')):
                 lista1.append(dict_sel)
 
             else:
@@ -70,10 +83,11 @@ def sorteio_copa():
     ordem = (lista10 + lista9 + lista8 + lista7 + lista6 +
              lista5 + lista4 + lista3 + lista2 + lista1)
 
-    pote1 = list(ordem[:8])
-    pote2 = list(ordem[8:16])
-    pote3 = list(ordem[16:24])
-    pote4 = list(ordem[24:])
+    pote1 = [pais_sede, ordem[0], ordem[1], ordem[2],
+             ordem[3], ordem[4], ordem[5], ordem[6]]
+    pote2 = list(ordem[7:15])
+    pote3 = list(ordem[15:23])
+    pote4 = list(ordem[23:])
 
     # print('O pote 1 consiste em:\n {} \n'.format(pote1))
     # print('O pote 2 consiste em:\n {} \n'.format(pote2))
@@ -88,6 +102,27 @@ def sorteio_copa():
     # sortear os grupos através dos indices dos potes
 
     # CICLO DE GERAÇÃO DE NUMÉROS ALEATÓRIOS
+    pote1_sort = [1, 2, 3, 4, 5, 6, 7]
+    alep1 = choice(pote1_sort)
+    pote1_sort.remove(alep1)
+
+    alep2 = choice(pote1_sort)
+    pote1_sort.remove(alep2)
+
+    alep3 = choice(pote1_sort)
+    pote1_sort.remove(alep3)
+
+    alep4 = choice(pote1_sort)
+    pote1_sort.remove(alep4)
+
+    alep5 = choice(pote1_sort)
+    pote1_sort.remove(alep5)
+
+    alep6 = choice(pote1_sort)
+    pote1_sort.remove(alep6)
+
+    alep7 = choice(pote1_sort)
+    pote1_sort.remove(alep7)
 
     potes_sort = [0, 1, 2, 3, 4, 5, 6, 7]
     # posicoes do pote
@@ -132,31 +167,31 @@ def sorteio_copa():
     # print(potes_sort)
     # fim do oitavo ciclo
 
-    grupoA = [pote1[ale1], pote2[ale8], pote3[ale7], pote4[ale6]]
-    grupoB = [pote1[ale2], pote2[ale7], pote3[ale5], pote4[ale4]]
-    grupoC = [pote1[ale3], pote2[ale6], pote3[ale3], pote4[ale2]]
-    grupoD = [pote1[ale4], pote2[ale5], pote3[ale1], pote4[ale8]]
-    grupoE = [pote1[ale5], pote2[ale4], pote3[ale8], pote4[ale1]]
-    grupoF = [pote1[ale6], pote2[ale3], pote3[ale4], pote4[ale3]]
-    grupoG = [pote1[ale7], pote2[ale2], pote3[ale6], pote4[ale5]]
-    grupoH = [pote1[ale8], pote2[ale1], pote3[ale2], pote4[ale7]]
+    grupoA = [pote1[0], pote2[ale8], pote3[ale7], pote4[ale6]]
+    grupoB = [pote1[alep1], pote2[ale7], pote3[ale5], pote4[ale4]]
+    grupoC = [pote1[alep2], pote2[ale6], pote3[ale3], pote4[ale2]]
+    grupoD = [pote1[alep3], pote2[ale5], pote3[ale1], pote4[ale8]]
+    grupoE = [pote1[alep4], pote2[ale4], pote3[ale8], pote4[ale1]]
+    grupoF = [pote1[alep5], pote2[ale3], pote3[ale4], pote4[ale3]]
+    grupoG = [pote1[alep6], pote2[ale2], pote3[ale6], pote4[ale5]]
+    grupoH = [pote1[alep7], pote2[ale1], pote3[ale2], pote4[ale7]]
 
     # Grupos contendo apenas as confederações dos países escolhidos
-    confgrupoA = [pote1[ale1]['Confederação'], pote2[ale8]['Confederação'],
+    confgrupoA = [pote1[0]['Confederação'], pote2[ale8]['Confederação'],
                   pote3[ale7]['Confederação'], pote4[ale6]['Confederação']]
-    confgrupoB = [pote1[ale2]['Confederação'], pote2[ale7]['Confederação'],
+    confgrupoB = [pote1[alep1]['Confederação'], pote2[ale7]['Confederação'],
                   pote3[ale5]['Confederação'], pote4[ale4]['Confederação']]
-    confgrupoC = [pote1[ale3]['Confederação'], pote2[ale6]['Confederação'],
+    confgrupoC = [pote1[alep2]['Confederação'], pote2[ale6]['Confederação'],
                   pote3[ale3]['Confederação'], pote4[ale2]['Confederação']]
-    confgrupoD = [pote1[ale4]['Confederação'], pote2[ale5]['Confederação'],
+    confgrupoD = [pote1[alep3]['Confederação'], pote2[ale5]['Confederação'],
                   pote3[ale1]['Confederação'], pote4[ale8]['Confederação']]
-    confgrupoE = [pote1[ale5]['Confederação'], pote2[ale4]['Confederação'],
+    confgrupoE = [pote1[alep4]['Confederação'], pote2[ale4]['Confederação'],
                   pote3[ale8]['Confederação'], pote4[ale1]['Confederação']]
-    confgrupoF = [pote1[ale6]['Confederação'], pote2[ale3]['Confederação'],
+    confgrupoF = [pote1[alep5]['Confederação'], pote2[ale3]['Confederação'],
                   pote3[ale4]['Confederação'], pote4[ale3]['Confederação']]
-    confgrupoG = [pote1[ale7]['Confederação'], pote2[ale2]['Confederação'],
+    confgrupoG = [pote1[alep6]['Confederação'], pote2[ale2]['Confederação'],
                   pote3[ale6]['Confederação'], pote4[ale5]['Confederação']]
-    confgrupoH = [pote1[ale8]['Confederação'], pote2[ale1]['Confederação'],
+    confgrupoH = [pote1[alep7]['Confederação'], pote2[ale1]['Confederação'],
                   pote3[ale2]['Confederação'], pote4[ale7]['Confederação']]
     # print('O Grupo A é: \n {}'.format(grupoA))
     # print('O Grupo B é: \n {}'.format(grupoB))
@@ -262,21 +297,23 @@ def sorteio_copa():
 
 
 # FIM DA FUNÇÃO SORTEIO
-grupos = sorteio_copa()
-GA = grupos[0]
-GB = grupos[1]
-GC = grupos[2]
-GD = grupos[3]
-GE = grupos[4]
-GF = grupos[5]
-GG = grupos[6]
-GH = grupos[7]
+if __name__ == '__main__':
 
-print('Grupo A:\n{}\n'.format(GA))
-print('Grupo B:\n{}\n'.format(GB))
-print('Grupo C:\n{}\n'.format(GC))
-print('Grupo D:\n{}\n'.format(GD))
-print('Grupo E:\n{}\n'.format(GE))
-print('Grupo F:\n{}\n'.format(GF))
-print('Grupo G:\n{}\n'.format(GG))
-print('Grupo H:\n{}\n'.format(GH))
+    grupos = sorteio_copa()
+    GA = grupos[0]
+    GB = grupos[1]
+    GC = grupos[2]
+    GD = grupos[3]
+    GE = grupos[4]
+    GF = grupos[5]
+    GG = grupos[6]
+    GH = grupos[7]
+
+    print('Grupo A:\n{}\n'.format(GA))
+    print('Grupo B:\n{}\n'.format(GB))
+    print('Grupo C:\n{}\n'.format(GC))
+    print('Grupo D:\n{}\n'.format(GD))
+    print('Grupo E:\n{}\n'.format(GE))
+    print('Grupo F:\n{}\n'.format(GF))
+    print('Grupo G:\n{}\n'.format(GG))
+    print('Grupo H:\n{}\n'.format(GH))
