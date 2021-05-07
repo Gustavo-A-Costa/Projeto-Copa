@@ -78,7 +78,7 @@ def sorteio_copa():
                 lista1.append(dict_sel)
 
             else:
-                print("Alguma seleção não possui força válida")
+                print(" ")
 
     ordem = (lista10 + lista9 + lista8 + lista7 + lista6 +
              lista5 + lista4 + lista3 + lista2 + lista1)

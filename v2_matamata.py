@@ -428,9 +428,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
             TL2 = SF2_1
     # Fim do jogo SF2
 
-    print('__DISPUTA DE TERCEIRO LUGAR__')
     # Jogo TL
-    print('______________________________')
 
     TL = resultado(int(TL1[1]), int(TL2[1]))
 
@@ -488,21 +486,18 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Fim do Mata Mata
 
-    print('{} foi a seleção vencedora da Copa do Mundo!'.format(Camp))
-    print('{} foi a seleção vice'.format(Vice))
-    print('{} foi a seleção que ficou em terceiro'.format(Terceiro))
-    print('{} foi a seleção que ficou em quarto'.format(Quarto))
-
     return (TO1, TO2, TO3, TO4, TO5, TO6, TO7, TO8,
             TO1P, TO2P, TO3P, TO4P, TO5P, TO6P, TO7P, TO8P,
             TQ1, TQ2, TQ3, TQ4, TSF1, TSF2, TTL, TFINAL,
-            TQ1P, TQ2P, TQ3P, TQ4P, TSF1P, TSF2P, TTLP, TFINALP)
+            TQ1P, TQ2P, TQ3P, TQ4P, TSF1P, TSF2P, TTLP, TFINALP,
+            Quarto, Terceiro, Vice, Camp)
 
 
 def textos_matamata(oi1, oi2, oi3, oi4, oi5, oi6, oi7, oi8,
                     oi1p, oi2p, oi3p, oi4p, oi5p, oi6p, oi7p, oi8p,
                     ql1, ql2, ql3, ql4, se1, se2, ter, fin,
-                    ql1p, ql2p, ql3p, ql4p, se1p, se2p, terp, finp):
+                    ql1p, ql2p, ql3p, ql4p, se1p, se2p, terp, finp,
+                    quart, terce, vice, camp):
 
     texto_oi1 = f"""
     {oi1}
@@ -553,6 +548,11 @@ def textos_matamata(oi1, oi2, oi3, oi4, oi5, oi6, oi7, oi8,
     texto_final = f"""
     {fin}
     {finp}
+    _______________________________________
+    {camp} foi a seleção campeã!
+    {vice} foi a seleção vice-campeã
+    {terce} ficou em terceiro
+    {quart} ficou em quarto
     """
 
     return [texto_oi1, texto_oi2, texto_oi3, texto_oi4,
