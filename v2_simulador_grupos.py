@@ -115,15 +115,22 @@ def tabela_grupos(grupo):
     return [classificacao, jogos]
 
 
-def textos_grupo(classif, j):
-    texto_classif = f"""
-    CLASSIFICAÇÃO:
-    País        / Pontos / GF / GS / SG
-    {classif[0]}
-    {classif[1]}
-    {classif[2]}
-    {classif[3]}
-    """
+def textos_grupo(cla, j):
+
+    pa, pb, pc, pd = cla[0][0], cla[1][0], cla[2][0], cla[3][0]
+    pta, ptb, ptc, ptd = cla[0][1], cla[1][1], cla[2][1], cla[3][1]
+    gfa, gfb, gfc, gfd = cla[0][2], cla[1][2], cla[2][2], cla[3][2]
+    gsa, gsb, gsc, gsd = cla[0][3], cla[1][3], cla[2][3], cla[3][3]
+    sga, sgb, sgc, sgd = cla[0][4], cla[1][4], cla[2][4], cla[3][4]
+
+    tabela = [
+            [pa, pta, gfa, gsa, sga],
+            [pb, ptb, gfb, gsb, sgb],
+            [pc, ptc, gfc, gsc, sgc],
+            [pd, ptd, gfd, gsd, sgd],
+            ]
+
+    texto_classif = tabela
     texto_1rod = f"""
     \nPRIMEIRA RODADA:\n
     {j['R1'][0][0]} {j['R1'][0][1]} x {j['R1'][0][2]} {j['R1'][0][3]}\n
