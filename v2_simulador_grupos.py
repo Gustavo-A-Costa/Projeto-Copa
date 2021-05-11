@@ -1,4 +1,4 @@
-from placar import resultado
+from v2p2_partida import resultado
 import operator
 
 
@@ -112,10 +112,13 @@ def tabela_grupos(grupo):
             [grupo[1]['País'], A3J2[0], A3J2[1], grupo[2]['País']],
         ]
     }
-    return [classificacao, jogos]
+    minutagens_grupos = [A1J1[2], A1J1[3], A1J2[2], A1J2[3],
+                         A2J1[2], A2J1[3], A2J2[2], A2J2[3],
+                         A3J1[2], A3J1[3], A3J2[2], A3J2[3]]
+    return [classificacao, jogos, minutagens_grupos]
 
 
-def textos_grupo(cla, j):
+def textos_grupo(cla, j, m):
 
     pa, pb, pc, pd = cla[0][0], cla[1][0], cla[2][0], cla[3][0]
     pta, ptb, ptc, ptd = cla[0][1], cla[1][1], cla[2][1], cla[3][1]
@@ -134,16 +137,22 @@ def textos_grupo(cla, j):
     texto_1rod = f"""
     \nPRIMEIRA RODADA:\n
     {j['R1'][0][0]} {j['R1'][0][1]} x {j['R1'][0][2]} {j['R1'][0][3]}\n
+    Gols: {m[0]} / {m[1]}\n
     {j['R1'][1][0]} {j['R1'][1][1]} x {j['R1'][1][2]} {j['R1'][1][3]}\n
+    Gols: {m[2]} / {m[3]}\n
     """
     texto_2rod = f"""
     \nSEGUNDA RODADA:\n
     {j['R2'][0][0]} {j['R2'][0][1]} x {j['R2'][0][2]} {j['R2'][0][3]}\n
+    Gols: {m[4]} / {m[5]}\n
     {j['R2'][1][0]} {j['R2'][1][1]} x {j['R2'][1][2]} {j['R2'][1][3]}\n
+    Gols: {m[6]} / {m[7]}\n
     """
     texto_3rod = f"""
     \nTERCEIRA RODADA:\n
     {j['R3'][0][0]} {j['R3'][0][1]} x {j['R3'][0][2]} {j['R3'][0][3]}\n
+    Gols: {m[8]} / {m[9]}\n
     {j['R3'][1][0]} {j['R3'][1][1]} x {j['R3'][1][2]} {j['R3'][1][3]}\n
+    Gols: {m[10]} / {m[11]}\n
     """
     return [texto_classif, texto_1rod, texto_2rod, texto_3rod]

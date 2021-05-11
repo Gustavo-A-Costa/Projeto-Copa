@@ -40,7 +40,7 @@ menu_principal = [
                  [sg.Text('Simulador de Copa do Mundo (Iniciante)',
                           size=(100, 5),
                           justification='center', font=ft)],
-                 [sg.Text('V2.0 / Gustavo Albuquerque 06/05/2021',
+                 [sg.Text('V2.2 / Gustavo Albuquerque 10/05/2021',
                           size=(100, 5),
                           justification='center', font=ft)],
                  [sg.Button('Começar!')],
@@ -48,7 +48,7 @@ menu_principal = [
 
 layout = menu_principal
 # janela
-janela = sg.Window('Simulador de Copa do Mundo V2.1', layout,
+janela = sg.Window('Simulador de Copa do Mundo V2.2', layout,
                    element_justification='c', size=tam)
 cabecalho = ['País', 'Pontos', 'G. F.', 'G. S.', 'S. G.']
 # eventos
@@ -74,7 +74,7 @@ while True:
             [sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.1',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Próximo':
@@ -97,7 +97,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.1',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Voltar':
@@ -122,7 +122,7 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.1',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                                layout, element_justification='c', size=tam)
 
     if i == 7:
@@ -143,7 +143,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Oitavas')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.1',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Oitavas':
@@ -153,11 +153,11 @@ while True:
             [sg.Text(topo2,
                      font=ft)],
             [sg.Text(lf[j],
-                     font=ft)],
+                     font=ft, justification='center')],
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.0',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Avançar':
@@ -170,7 +170,7 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Fim')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.1',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                                layout,
                                element_justification='c', size=(500, 500))
         else:
@@ -180,11 +180,11 @@ while True:
                 [sg.Text(topo2,
                          font=ft)],
                 [sg.Text(lf[j],
-                         font=ft)],
+                         font=ft, justification='center')],
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.1',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.2',
                                layout, element_justification='c', size=tam)
 
     if eventos == 'Fim':

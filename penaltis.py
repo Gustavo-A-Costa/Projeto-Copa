@@ -37,6 +37,3 @@ def desempate():
             t = Pen_A - Pen_B
 
     return [Pen_A, Pen_B]
-
-
-print(desempate())

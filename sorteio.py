@@ -1,22 +1,14 @@
 # Código por Gustavo Albuquerque - 20/04/2021
 from random import choice
+
 # primeiro passo: marcar os potes para o sorteio
 # seria legal colocar o país sede no topo!
 # imprimir o resultado em um arquivo.txt seria muito bom também.
 
 
 def sorteio_copa():
-
-    lista10 = []   # Coloco as listas aqui para que elas não existam ap-
-    lista9 = []    # -enas na condição do for. Se eu as coloco dentro do
-    lista8 = []    # for, elas somem a cada iteração que o bloco faz e são
-    lista7 = []    # sobrescritas.
-    lista6 = []
-    lista5 = []
-    lista4 = []
-    lista3 = []
-    lista2 = []
-    lista1 = []
+    print("Simulando...")
+    lista10 = []
     erroc = 0
     errou = 0
     with open('copa.csv') as arquivo:
@@ -37,57 +29,19 @@ def sorteio_copa():
             if 'sede' in dict_sel.get('Sede?'):
                 pais_sede = dict_sel
 
-            if ('10' in dict_sel.get('Nível') and 'sede'
-                    not in dict_sel.get('Sede?')):
+            if 'sede' not in dict_sel.get('Sede?'):
                 lista10.append(dict_sel)
 
-            elif ('9' in dict_sel.get('Nível') and 'sede'
-                    not in dict_sel.get('Sede?')):
-                lista9.append(dict_sel)
-
-            elif ('8' in dict_sel.get('Nível') and 'sede'
-                    not in dict_sel.get('Sede?')):
-                lista8.append(dict_sel)
-
-            elif ('7' in dict_sel.get('Nível') and 'sede'
-                    not in dict_sel.get('Sede?')):
-                lista7.append(dict_sel)
-
-            elif ('6' in dict_sel.get('Nível') and 'sede'
-                  not in dict_sel.get('Sede?')):
-                lista6.append(dict_sel)
-
-            elif ('5' in dict_sel.get('Nível') and 'sede'
-                  not in dict_sel.get('Sede?')):
-                lista5.append(dict_sel)
-
-            elif ('4' in dict_sel.get('Nível') and 'sede'
-                  not in dict_sel.get('Sede?')):
-                lista4.append(dict_sel)
-
-            elif ('3' in dict_sel.get('Nível') and 'sede'
-                  not in dict_sel.get('Sede?')):
-                lista3.append(dict_sel)
-
-            elif ('2' in dict_sel.get('Nível') and 'sede'
-                  not in dict_sel.get('Sede?')):
-                lista2.append(dict_sel)
-
-            elif ('1' in dict_sel.get('Nível') and 'sede'
-                  not in dict_sel.get('Sede?')):
-                lista1.append(dict_sel)
-
-            else:
-                print(" ")
-
-    ordem = (lista10 + lista9 + lista8 + lista7 + lista6 +
-             lista5 + lista4 + lista3 + lista2 + lista1)
-
-    pote1 = [pais_sede, ordem[0], ordem[1], ordem[2],
-             ordem[3], ordem[4], ordem[5], ordem[6]]
-    pote2 = list(ordem[7:15])
-    pote3 = list(ordem[15:23])
-    pote4 = list(ordem[23:])
+    ordem = sorted(lista10, key=lambda k: k['Nível'])
+    pote1 = [pais_sede, ordem[30], ordem[29], ordem[28],
+             ordem[27], ordem[26], ordem[25], ordem[24]]
+    print('Pote 1: ', pote1)
+    pote2 = list(ordem[16:24])
+    print('Pote 2: ', pote2)
+    pote3 = list(ordem[8:16])
+    print('Pote 3: ', pote3)
+    pote4 = list(ordem[0:8])
+    print('Pote 4: ', pote4)
 
     # print('O pote 1 consiste em:\n {} \n'.format(pote1))
     # print('O pote 2 consiste em:\n {} \n'.format(pote2))
@@ -292,7 +246,8 @@ def sorteio_copa():
         return sorteio_copa()
 
     else:
-        print('Sorteio organizado com sucesso!')
+        print('Copa organizada e simulada com sucesso!')
+        print('Abrindo janela...')
         return [grupoA, grupoB, grupoC, grupoD, grupoE, grupoF, grupoG, grupoH]
 
 

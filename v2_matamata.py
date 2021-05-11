@@ -1,7 +1,7 @@
 # Código por Gustavo Albuquerque - 20/04/2021
 from v2_simulador_grupos import tabela_grupos
 from sorteio import sorteio_copa
-from placar import resultado
+from v2p2_partida import resultado
 from penaltis import desempate
 
 
@@ -112,6 +112,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo O1
 
     O1 = resultado(int(A1[1]), int(B2[1]))
+    pO1 = O1
 
     TO1 = ('\n{} {} x {} {}\n'.format(A1[0],
                                       O1[0], O1[1], B2[0]))
@@ -134,6 +135,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo O2
 
     O2 = resultado(int(C1[1]), int(D2[1]))
+    pO2 = O2
 
     TO2 = ('\n{} {} x {} {}\n'.format(C1[0],
                                       O2[0], O2[1], D2[0]))
@@ -155,6 +157,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O3
     O3 = resultado(int(E1[1]), int(F2[1]))
+    pO3 = O3
 
     TO3 = ('\n{} {} x {} {}\n'.format(E1[0],
                                       O3[0], O3[1], F2[0]))
@@ -177,6 +180,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo O4
 
     O4 = resultado(int(G1[1]), int(H2[1]))
+    pO4 = O4
 
     TO4 = ('\n{} {} x {} {}\n'.format(G1[0],
                                       O4[0], O4[1], H2[0]))
@@ -199,6 +203,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo O5
 
     O5 = resultado(int(B1[1]), int(A2[1]))
+    pO5 = O5
 
     TO5 = ('\n{} {} x {} {}\n'.format(B1[0],
                                       O5[0], O5[1], A2[0]))
@@ -221,6 +226,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo O6
 
     O6 = resultado(int(D1[1]), int(C2[1]))
+    pO6 = O6
 
     TO6 = ('\n{} {} x {} {}\n'.format(D1[0],
                                       O6[0], O6[1], C2[0]))
@@ -243,6 +249,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo O7
 
     O7 = resultado(int(F1[1]), int(E2[1]))
+    pO7 = O7
 
     TO7 = ('\n{} {} x {} {}\n'.format(F1[0],
                                       O7[0], O7[1], E2[0]))
@@ -265,6 +272,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O8
     O8 = resultado(int(H1[1]), int(G2[1]))
+    pO8 = O8
 
     TO8 = ('\n{} {} x {} {}\n'.format(H1[0],
                                       O8[0], O8[1], G2[0]))
@@ -289,6 +297,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo QF1
 
     QF1 = resultado(int(QF1_1[1]), int(QF1_2[1]))
+    pQF1 = QF1
 
     TQ1 = ('\n{} {} x {} {}\n'.format(QF1_1[0],
                                       QF1[0], QF1[1], QF1_2[0]))
@@ -312,6 +321,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo QF2
 
     QF2 = resultado(int(QF2_1[1]), int(QF2_2[1]))
+    pQF2 = QF2
 
     TQ2 = ('\n{} {} x {} {}\n'.format(QF2_1[0],
                                       QF2[0], QF2[1], QF2_2[0]))
@@ -334,6 +344,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo QF3
 
     QF3 = resultado(int(QF3_1[1]), int(QF3_2[1]))
+    pQF3 = QF3
 
     TQ3 = ('\n{} {} x {} {}\n'.format(QF3_1[0],
                                       QF3[0], QF3[1], QF3_2[0]))
@@ -356,6 +367,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo QF4
 
     QF4 = resultado(int(QF4_1[1]), int(QF4_2[1]))
+    pQF4 = QF4
 
     TQ4 = ('\n{} {} x {} {}\n'.format(QF4_1[0],
                                       QF4[0], QF4[1], QF4_2[0]))
@@ -379,6 +391,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo SF1
 
     SF1 = resultado(int(SF1_1[1]), int(SF1_2[1]))
+    pSF1 = SF1
 
     TSF1 = ('\n{} {} x {} {}\n'.format(SF1_1[0],
                                        SF1[0], SF1[1], SF1_2[0]))
@@ -405,6 +418,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo SF2
 
     SF2 = resultado(int(SF2_1[1]), int(SF2_2[1]))
+    pSF2 = SF2
 
     TSF2 = ('\n{} {} x {} {}\n'.format(SF2_1[0],
                                        SF2[0], SF2[1], SF2_2[0]))
@@ -431,6 +445,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo TL
 
     TL = resultado(int(TL1[1]), int(TL2[1]))
+    pTL = TL
 
     TTL = ('\n{} {} x {} {}\n'.format(TL1[0],
                                       TL[0], TL[1], TL2[0]))
@@ -461,6 +476,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Jogo final
 
     final = resultado(int(FINAL_1[1]), int(FINAL_2[1]))
+    pfinal = final
 
     TFINAL = ('\n{} {} x {} {}\n'.format(FINAL_1[0],
                                          final[0], final[1], FINAL_2[0]))
@@ -486,68 +502,109 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Fim do Mata Mata
 
+    mm_mins = [pO1[2], pO1[3], pO2[2], pO2[3],
+               pO3[2], pO3[3], pO4[2], pO4[3],
+               pO5[2], pO5[3], pO6[2], pO6[3],
+               pO7[2], pO7[3], pO8[2], pO8[3],
+               pQF1[2], pQF1[3], pQF2[2], pQF2[3],
+               pQF3[2], pQF3[3], pQF4[2], pQF4[3],
+               pSF1[2], pSF1[3], pSF2[2], pSF2[3],
+               pTL[2], pTL[3], pfinal[2], pfinal[3]]
+
     return (TO1, TO2, TO3, TO4, TO5, TO6, TO7, TO8,
             TO1P, TO2P, TO3P, TO4P, TO5P, TO6P, TO7P, TO8P,
             TQ1, TQ2, TQ3, TQ4, TSF1, TSF2, TTL, TFINAL,
             TQ1P, TQ2P, TQ3P, TQ4P, TSF1P, TSF2P, TTLP, TFINALP,
-            Quarto, Terceiro, Vice, Camp)
+            Quarto, Terceiro, Vice, Camp, mm_mins)
 
 
 def textos_matamata(oi1, oi2, oi3, oi4, oi5, oi6, oi7, oi8,
                     oi1p, oi2p, oi3p, oi4p, oi5p, oi6p, oi7p, oi8p,
                     ql1, ql2, ql3, ql4, se1, se2, ter, fin,
                     ql1p, ql2p, ql3p, ql4p, se1p, se2p, terp, finp,
-                    quart, terce, vice, camp):
+                    quart, terce, vice, camp, m):
 
     texto_oi1 = f"""
     {oi1}
     {oi1p}
+    Gols: {m[0]} / {m[1]}
+    _____________________________________________________
     {oi2}
     {oi2p}
+    Gols: {m[2]} / {m[3]}
+    _____________________________________________________
     """
     texto_oi2 = f"""
     {oi3}
     {oi3p}
+    Gols: {m[4]} / {m[5]}
+    _____________________________________________________
     {oi4}
     {oi4p}
+    Gols: {m[6]} / {m[7]}
+    _____________________________________________________
     """
     texto_oi3 = f"""
     {oi5}
     {oi5p}
+    Gols: {m[8]} / {m[9]}
+    _____________________________________________________
     {oi6}
     {oi6p}
+    Gols: {m[10]} / {m[11]}
+    _____________________________________________________
     """
     texto_oi4 = f"""
     {oi7}
     {oi7p}
+    Gols: {m[12]} / {m[13]}
+    _____________________________________________________
     {oi8}
     {oi8p}
+    Gols: {m[14]} / {m[15]}
+    _____________________________________________________
     """
     texto_qua1 = f"""
     {ql1}
     {ql1p}
+    Gols: {m[16]} / {m[17]}
+    _____________________________________________________
     {ql2}
     {ql2p}
+    Gols: {m[18]} / {m[19]}
+    _____________________________________________________
     """
     texto_qua2 = f"""
     {ql3}
     {ql3p}
+    Gols: {m[20]} / {m[21]}
+    _____________________________________________________
     {ql4}
     {ql4p}
+    Gols: {m[22]} / {m[23]}
+    _____________________________________________________
     """
     texto_semi = f"""
     {se1}
     {se1p}
+    Gols: {m[24]} / {m[25]}
+    _____________________________________________________
     {se2}
     {se2p}
+    Gols: {m[26]} / {m[27]}
+    _____________________________________________________
     """
     texto_tl = f"""
     {ter}
     {terp}
+    Gols: {m[28]} / {m[29]}
+    _____________________________________________________
     """
     texto_final = f"""
     {fin}
     {finp}
+    Gols: {m[30]} / {m[31]}
+
     _______________________________________
     {camp} foi a seleção campeã!
     {vice} foi a seleção vice-campeã
