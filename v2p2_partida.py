@@ -1,7 +1,7 @@
 from random import randint, choice
 
 
-def resultado(forcaA, forcaB):
+def resultado(forcaA, forcaB, pro=False):
     # zerando o relogio
     minutagem = 1
 
@@ -26,7 +26,10 @@ def resultado(forcaA, forcaB):
                       6, 6, 7, 7, 8, 9, 10]
     acrescimos = choice(grp_acrescimos)
 
-    for minutagem in range(1, 90 + acrescimos):
+    tempo_jogo = 90 + acrescimos
+
+# ____________________________ Jogo Normal __________________
+    for minutagem in range(1, tempo_jogo):
         if meioA > meioB and ataqueA > defesaB and chance == 1:
             golsA += 1
             texto_GA.append(f"{minutagem}'")
@@ -57,6 +60,40 @@ def resultado(forcaA, forcaB):
         acrescimos = choice(grp_acrescimos)
         minutagem += 1
 
+# ____________________________ Fim do Jogo Normal __________________
+# ____________________________ Prorrogacao __________________
+    if golsA == golsB and pro is True:
+        for minutagem in range(tempo_jogo, tempo_jogo + 31):
+            if meioA > meioB and ataqueA > defesaB and chance == 1:
+                golsA += 1
+                texto_GA.append(f"{minutagem}'(Pro)")
+            if meioB > meioA and ataqueB > defesaA and chance == 1:
+                golsB += 1
+                texto_GB.append(f"{minutagem}'(Pro)")
+
+            if golsA + golsB in range(2, 5) and minutagem % 5 == 0:
+                hora_do_gol.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                    0, 0, 0])
+                # p/ diminuir qtd de goleadas bizarras
+
+            if golsA + golsB > 6 and minutagem % 5 == 0:
+                hora_do_gol.append([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                    0, 0, 0])
+                # p/ diminuir qtd de goleadas bizarras
+
+            chance = choice(hora_do_gol)
+            ataqueA = randint(0, forcaA)
+            ataqueB = randint(0, forcaB)
+            meioA = randint(0, forcaA)
+            meioB = randint(0, forcaB)
+            defesaA = randint(0, forcaA)
+            defesaB = randint(0, forcaB)
+            acrescimos = choice(grp_acrescimos)
+            minutagem += 1
+# ____________________________ Fim da Prorrogacao __________________
+
     if golsA == golsB:
         zz = randint(1, 2)
         # garante uma taxa de 0x0 em torno de 6 %
@@ -83,6 +120,7 @@ def resultado(forcaA, forcaB):
 if __name__ == '__main__':
     golsA = ''
     golsB = ''
-    p = resultado(100, 40)
+
+    p = resultado(99, 99, pro=True)
     print(f'França {p[0]} x {p[1]} Alemanha')
     print(f'Gols: {p[2]} / {p[3]}')

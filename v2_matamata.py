@@ -111,7 +111,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O1
 
-    O1 = resultado(int(A1[1]), int(B2[1]))
+    O1 = resultado(int(A1[1]), int(B2[1]), pro=True)
     pO1 = O1
 
     TO1 = ('\n{} {} x {} {}\n'.format(A1[0],
@@ -134,7 +134,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O2
 
-    O2 = resultado(int(C1[1]), int(D2[1]))
+    O2 = resultado(int(C1[1]), int(D2[1]), pro=True)
     pO2 = O2
 
     TO2 = ('\n{} {} x {} {}\n'.format(C1[0],
@@ -156,7 +156,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Fim do jogo O2
 
     # Jogo O3
-    O3 = resultado(int(E1[1]), int(F2[1]))
+    O3 = resultado(int(E1[1]), int(F2[1]), pro=True)
     pO3 = O3
 
     TO3 = ('\n{} {} x {} {}\n'.format(E1[0],
@@ -179,7 +179,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O4
 
-    O4 = resultado(int(G1[1]), int(H2[1]))
+    O4 = resultado(int(G1[1]), int(H2[1]), pro=True)
     pO4 = O4
 
     TO4 = ('\n{} {} x {} {}\n'.format(G1[0],
@@ -202,7 +202,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O5
 
-    O5 = resultado(int(B1[1]), int(A2[1]))
+    O5 = resultado(int(B1[1]), int(A2[1]), pro=True)
     pO5 = O5
 
     TO5 = ('\n{} {} x {} {}\n'.format(B1[0],
@@ -225,7 +225,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O6
 
-    O6 = resultado(int(D1[1]), int(C2[1]))
+    O6 = resultado(int(D1[1]), int(C2[1]), pro=True)
     pO6 = O6
 
     TO6 = ('\n{} {} x {} {}\n'.format(D1[0],
@@ -248,7 +248,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O7
 
-    O7 = resultado(int(F1[1]), int(E2[1]))
+    O7 = resultado(int(F1[1]), int(E2[1]), pro=True)
     pO7 = O7
 
     TO7 = ('\n{} {} x {} {}\n'.format(F1[0],
@@ -271,7 +271,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Fim do jogo O7
 
     # Jogo O8
-    O8 = resultado(int(H1[1]), int(G2[1]))
+    O8 = resultado(int(H1[1]), int(G2[1]), pro=True)
     pO8 = O8
 
     TO8 = ('\n{} {} x {} {}\n'.format(H1[0],
@@ -296,7 +296,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF1
 
-    QF1 = resultado(int(QF1_1[1]), int(QF1_2[1]))
+    QF1 = resultado(int(QF1_1[1]), int(QF1_2[1]), pro=True)
     pQF1 = QF1
 
     TQ1 = ('\n{} {} x {} {}\n'.format(QF1_1[0],
@@ -320,7 +320,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF2
 
-    QF2 = resultado(int(QF2_1[1]), int(QF2_2[1]))
+    QF2 = resultado(int(QF2_1[1]), int(QF2_2[1]), pro=True)
     pQF2 = QF2
 
     TQ2 = ('\n{} {} x {} {}\n'.format(QF2_1[0],
@@ -343,7 +343,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF3
 
-    QF3 = resultado(int(QF3_1[1]), int(QF3_2[1]))
+    QF3 = resultado(int(QF3_1[1]), int(QF3_2[1]), pro=True)
     pQF3 = QF3
 
     TQ3 = ('\n{} {} x {} {}\n'.format(QF3_1[0],
@@ -366,7 +366,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF4
 
-    QF4 = resultado(int(QF4_1[1]), int(QF4_2[1]))
+    QF4 = resultado(int(QF4_1[1]), int(QF4_2[1]), pro=True)
     pQF4 = QF4
 
     TQ4 = ('\n{} {} x {} {}\n'.format(QF4_1[0],
@@ -390,7 +390,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # SEMI FINAL
     # Jogo SF1
 
-    SF1 = resultado(int(SF1_1[1]), int(SF1_2[1]))
+    SF1 = resultado(int(SF1_1[1]), int(SF1_2[1]), pro=True)
     pSF1 = SF1
 
     TSF1 = ('\n{} {} x {} {}\n'.format(SF1_1[0],
@@ -417,7 +417,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo SF2
 
-    SF2 = resultado(int(SF2_1[1]), int(SF2_2[1]))
+    SF2 = resultado(int(SF2_1[1]), int(SF2_2[1]), pro=True)
     pSF2 = SF2
 
     TSF2 = ('\n{} {} x {} {}\n'.format(SF2_1[0],
@@ -444,7 +444,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo TL
 
-    TL = resultado(int(TL1[1]), int(TL2[1]))
+    TL = resultado(int(TL1[1]), int(TL2[1]), pro=True)
     pTL = TL
 
     TTL = ('\n{} {} x {} {}\n'.format(TL1[0],
@@ -475,7 +475,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo final
 
-    final = resultado(int(FINAL_1[1]), int(FINAL_2[1]))
+    final = resultado(int(FINAL_1[1]), int(FINAL_2[1]), pro=True)
     pfinal = final
 
     TFINAL = ('\n{} {} x {} {}\n'.format(FINAL_1[0],

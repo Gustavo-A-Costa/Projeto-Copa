@@ -3,6 +3,7 @@ from random import randint
 
 
 def desempate():
+    Prob_Pen = [0, 1, 1, 1]
     Pen_A = 0
     Pen_B = 0
     i = 0
@@ -16,11 +17,11 @@ def desempate():
         if (Pen_B + 5 - i) < Pen_A:
             break
 
-        BatidaA = randint(0, 1)
+        BatidaA = Prob_Pen[randint(0, 3)]
         if BatidaA == 1:
             Pen_A = Pen_A + 1
 
-        BatidaB = randint(0, 1)
+        BatidaB = Prob_Pen[randint(0, 3)]
         if BatidaB == 1:
             Pen_B = Pen_B + 1
 

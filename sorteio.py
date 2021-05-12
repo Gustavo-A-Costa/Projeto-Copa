@@ -35,13 +35,9 @@ def sorteio_copa():
     ordem = sorted(lista10, key=lambda k: k['Nível'])
     pote1 = [pais_sede, ordem[30], ordem[29], ordem[28],
              ordem[27], ordem[26], ordem[25], ordem[24]]
-    print('Pote 1: ', pote1)
     pote2 = list(ordem[16:24])
-    print('Pote 2: ', pote2)
     pote3 = list(ordem[8:16])
-    print('Pote 3: ', pote3)
     pote4 = list(ordem[0:8])
-    print('Pote 4: ', pote4)
 
     # print('O pote 1 consiste em:\n {} \n'.format(pote1))
     # print('O pote 2 consiste em:\n {} \n'.format(pote2))
@@ -249,6 +245,67 @@ def sorteio_copa():
         print('Copa organizada e simulada com sucesso!')
         print('Abrindo janela...')
         return [grupoA, grupoB, grupoC, grupoD, grupoE, grupoF, grupoG, grupoH]
+
+
+def texto_sorteio(dados):
+    textoA = f"""
+    Grupo A:
+    {dados[0][0]['País']}
+    {dados[0][1]['País']}
+    {dados[0][2]['País']}
+    {dados[0][3]['País']}\n
+    """
+    textoB = f"""
+    Grupo B:
+    {dados[1][0]['País']}
+    {dados[1][1]['País']}
+    {dados[1][2]['País']}
+    {dados[1][3]['País']}\n
+    """
+    textoC = f"""
+    Grupo C:
+    {dados[2][0]['País']}
+    {dados[2][1]['País']}
+    {dados[2][2]['País']}
+    {dados[2][3]['País']}\n
+    """
+    textoD = f"""
+    Grupo D:
+    {dados[3][0]['País']}
+    {dados[3][1]['País']}
+    {dados[3][2]['País']}
+    {dados[3][3]['País']}\n
+    """
+    textoE = f"""
+    Grupo E:
+    {dados[4][0]['País']}
+    {dados[4][1]['País']}
+    {dados[4][2]['País']}
+    {dados[4][3]['País']}\n
+    """
+    textoF = f"""
+    Grupo F:
+    {dados[5][0]['País']}
+    {dados[5][1]['País']}
+    {dados[5][2]['País']}
+    {dados[5][3]['País']}\n
+    """
+    textoG = f"""
+    Grupo G:
+    {dados[6][0]['País']}
+    {dados[6][1]['País']}
+    {dados[6][2]['País']}
+    {dados[6][3]['País']}\n
+    """
+    textoH = f"""
+    Grupo H:
+    {dados[7][0]['País']}
+    {dados[7][1]['País']}
+    {dados[7][2]['País']}
+    {dados[7][3]['País']}\n
+    """
+    return [textoA, textoB, textoC, textoD,
+            textoE, textoF, textoG, textoH]
 
 
 # FIM DA FUNÇÃO SORTEIO
