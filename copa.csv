@@ -1,32 +1,32 @@
-Alemanha, UEFA, 90, ns
-Espanha, UEFA, 91, ns
-Franca, UEFA, 98, ns
-Portugal, UEFA, 92, ns
-Belgica, UEFA, 99, ns
-Inglaterra, UEFA, 93, ns
-Italia, UEFA, 90, ns
-Holanda, UEFA, 89, ns
-Croacia, UEFA, 90, ns
-Russia, UEFA, 81, ns
-Suecia, UEFA, 87, ns
-Hungria, UEFA, 81, ns
-Polonia, UEFA, 87, ns
-Japao, AFC, 84, ns
-Australia, AFC, 81, ns
-Qatar, AFC, 77, sede
-Coreia do Sul, AFC, 81, ns
-Ira, AFC, 81, ns
-Camaroes, CAF, 78, ns
-Egito, CAF, 80, ns
-Nigeria, CAF, 82, ns
-Gana, CAF, 79, ns
-Senegal, CAF, 87, ns
-Mexico, CONCACAF, 91, ns
-Estados Unidos, CONCACAF, 86, ns
-Costa Rica, CONCACAF, 79, ns
-Brasil, CONMEBOL, 97, ns
-Argentina, CONMEBOL, 91, ns
-Uruguai, CONMEBOL, 91, ns
-Colombia, CONMEBOL, 89, ns
-Chile, CONMEBOL, 87, ns
-Nova Zelandia, OFC, 64, ns
+Alemanha, UEFA, 90, ns, Neuer, R. Koch, Ginter, Schulz, Klostermann, Kimmich, Kroos, Gundogan, Werner, Gnabry, Goretzka
+Espanha, UEFA, 91, ns, De Gea, Nacho, Ramos, Alonso, Carvajal, Saul, Busquets, Alcantara, Isco, Asensio, Rodrigo
+Franca, UEFA, 98, ns, Lloris, Varane, Umtiti, Pavard, Hernandez, Tolisso, Kante, Pogba, Mbappe, Griezmann, Dembele 
+Portugal, UEFA, 92, ns, Patricio, Pepe, Dias, Rui, Cancelo, Bruma, Neves, Carvalho, B. Silva, Cristiano, Felix
+Belgica, UEFA, 99, ns, Courtois, Boyata, Kompany, Alderweireld, Tielemans, Witsel, Carrasco, Meunier, Hazard, Mertens, Lukaku
+Inglaterra, UEFA, 93, ns, Pickford, Maguire, Stones, Walker, Shaw, Henderson, Trippier, Alli, Rashford, Lingard, Kane
+Italia, UEFA, 90, ns, Donnarumma, Chiellini, Bonucci, Criscito, Florenzi, Gagliardini, Jorginho, Pellegrini, Insigne, Immobile, Berardi
+Holanda, UEFA, 89, ns, Cilessen, Van Dijk, Ligt, Blind, Dumfries, De Jong, Roon, Babel, Wijnaldum, Bergwijn, Depay
+Croacia, UEFA, 90, ns, Livakovic, Vida, Lovren, Jedvaj, Pivaric, Kovacic, Perisic, Rakitic, Pjaca, Modric, Rebic
+Russia, UEFA, 81, ns, Shunin, Dzhikiya, Semenov, Karavaev, Fernandes, Fomin, Akhmetov, Cheryshev, Ionov, Golovin, Kuzyaev
+Suecia, UEFA, 87, ns, Olsen, Lindelof, Helander, Lustig, Augustinsson, Larsson, Olsson, Forsberg, Kulusevski, Isak, Ibrahimovic
+Hungria, UEFA, 81, ns, Gulacsi, Orban, Fiola, Szalai, Nagy, Kalmar, Lovrencsics, Hangya, Szoboszlai, Sallai, Szalai
+Polonia, UEFA, 87, ns, Szczesny, Bednarek, Glik, Bereszynski, Rybus, Klich, Krychowiak, Zielinski, Jozwiak, Milik, Lewandowski
+Japao, AFC, 84, ns, Kawashima, Shoji, Yoshida, Sakai, Nagatomo, Hasebe, Shibasaki, Inui, Kagawa, Haraguchi, Osako
+Australia, AFC, 81, ns, Ryan, Degenek, Sainsbury, Grant, Smith, Jeggo, Irvine, Mooy, Mabil, Taggart, Leckie
+Qatar, AFC, 77, sede, Al Sheeb, Khoukhi, Salman, Hisham, Al Hajiri, Hatim, Khalid, Boudiaf, Miguel, Akram, Almoez
+Coreia do Sul, AFC, 81, ns, Jo, Lee, Park, Kim, Jang, Koo, Ki, Lee, Son, Kim, Hwang
+Ira, AFC, 81, ns, Beiranvand, Pouraliganji, Khanzadeh, Hajisafi, Rezaeian, Ansarifard, Ezatolahi, Shojaei, Amiri, Jahanbakhsh, Azmoun
+Camaroes, CAF, 78, ns, Ondoa, Onguene, Bagnack, Ngah, Mbaizo, Djoum, Onana, Malong, Tabekou, Ngamaleu, Aboubakar
+Egito, CAF, 80, ns, Shenawy, Hegazzi, Hamdy, Gaber, Gomaa, Elneny, Hamed, Afsha, Salah, Trezeguet, Mohamed
+Nigeria, CAF, 82, ns, Akpeyi, Omeruo, Troost-Ekong, Collins, Awaziem, Etebo, Ndidi, Iwobi, Musa, Chukwueze, Ighalo
+Gana, CAF, 79, ns, Abalora, Rahman, Opoku, Abang, Imoro, Blay, Esso, Awako, Andre Ayew, Boateng, Gyasi, Jordan Ayew
+Senegal, CAF, 87, ns, Gomis, Koulibaly, Kouyate, Sabaly, Gassama, Gueyem, N'Diaye, Salvet, Balde, Mane, Niang
+Mexico, CONCACAF, 91, ns, Ochoa, Moreno, Araujo, Rodriguez, Gallardo, Alvarez, Guardado, Herrera, Lozano, Jimenez, Corona
+Estados Unidos, CONCACAF, 86, ns, Steffen, Brooks, Long, Cannon, Dest, Adams, McKennie, Lletget, Pulisic, Morris, Altidore
+Costa Rica, CONCACAF, 79, ns, Navas, Acosta, Watson, Gonzalez, Oviedo, Gamboa, Bolanos, Guzman, Borges, Ruiz, Urena
+Brasil, CONMEBOL, 97, ns, Alisson, Miranda, Marquinhos, Dani Alves, Marcelo, Coutinho, Fernandinho, Casemiro, Firmino, Neymar, Jesus 
+Argentina, CONMEBOL, 91, ns, Martinez, Quarta, Otamendi, Tagliafico, Montiel, Acuna, Paredes, Gomez, Di Maria, Martinez, Messi
+Uruguai, CONMEBOL, 91, ns, Muslera, Caceres, Godin, Gimenez, Varela, Nandez, Vecino, Valverde, Arrascaeta, Cavani, Suarez
+Colombia, CONMEBOL, 89, ns, Ospina, Murillo, Sanchez, Mojica, Medina, Barrios, Uribe, Cuadrado, Rodriguez, Muriel, Zapata
+Chile, CONMEBOL, 87, ns, Bravo, Maripan, Medel, Fuenzalida, Vegas, Vidal, Pulgar, Aranguiz, Sanchez, Mora, Orellana
+Nova Zelandia, OFC, 64, ns, Marinovic, Reid, Boxall, Payne, Cacace, Bell, Thomas, Singh, Rojas, Wood, Barbarouses
