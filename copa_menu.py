@@ -8,7 +8,7 @@ from v2_matamata import copa_mundo, textos_matamata
 ft = 'Bahnschrift'
 
 # tamanho da janela
-tam = (800, 450)
+tam = (900, 600)
 
 grupos = sorteio_copa()
 GA = tabela_grupos(grupos[0])
@@ -38,10 +38,16 @@ topo2 = f'{lfas[j]}'
 # layout
 sg.theme('Dark Brown 1')
 menu_principal = [
-                 [sg.Text('Simulador de Copa do Mundo (Iniciante)',
-                          size=(100, 5),
+                 [sg.Text('\n\n\n',
+                          size=(10000, 5),
                           justification='center', font=ft)],
-                 [sg.Text('V2.3 / Gustavo Albuquerque 11/05/2021',
+                 [sg.Text('Simulador de Copa do Mundo (Iniciante)',
+                          size=(1000000, 5),
+                          justification='center', font=ft)],
+                 [sg.Text('v2.4',
+                          size=(4, 4),
+                          justification='center', font=ft)],
+                 [sg.Text('Gustavo Albuquerque - 13/05/2021',
                           size=(100, 5),
                           justification='center', font=ft)],
                  [sg.Button('Começar!')],
@@ -49,7 +55,7 @@ menu_principal = [
 
 layout = menu_principal
 # janela
-janela = sg.Window('Simulador de Copa do Mundo V2.3', layout,
+janela = sg.Window('Simulador de Copa do Mundo V2.4', layout,
                    element_justification='c', size=tam)
 cabecalho = ['País', 'Pontos', 'G. F.', 'G. S.', 'S. G.']
 # eventos
@@ -78,7 +84,7 @@ while True:
             [sg.Button('Continuar!')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                            layout, element_justification='c', size=tam)
     if eventos == sg.WINDOW_CLOSED:
         break
@@ -91,16 +97,16 @@ while True:
                       auto_size_columns=True, hide_vertical_scroll=True,
                       font=ft, num_rows=4,
                       justification='left')],
-            [sg.Text(textos_grupo(*(lg[i]))[1],
+            [sg.Text(textos_grupo(*(lg[i]))[1], size=(30, 18),
                      justification='center', font=ft),
-             sg.Text(textos_grupo(*(lg[i]))[2],
+             sg.Text(textos_grupo(*(lg[i]))[2], size=(30, 18),
                      justification='center', font=ft),
-             sg.Text(textos_grupo(*(lg[i]))[3],
+             sg.Text(textos_grupo(*(lg[i]))[3], size=(30, 18),
                      justification='center', font=ft)],
             [sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Próximo':
@@ -114,16 +120,16 @@ while True:
                       auto_size_columns=True, hide_vertical_scroll=True,
                       font=ft, num_rows=4,
                       justification='left')],
-            [sg.Text(textos_grupo(*(lg[i]))[1],
+            [sg.Text(textos_grupo(*(lg[i]))[1], size=(30, 18),
                      justification='center', font=ft),
-             sg.Text(textos_grupo(*(lg[i]))[2],
+             sg.Text(textos_grupo(*(lg[i]))[2], size=(30, 18),
                      justification='center', font=ft),
-             sg.Text(textos_grupo(*(lg[i]))[3],
+             sg.Text(textos_grupo(*(lg[i]))[3], size=(30, 18),
                      justification='center', font=ft)],
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Voltar':
@@ -139,16 +145,16 @@ while True:
                           auto_size_columns=True, hide_vertical_scroll=True,
                           font=ft, num_rows=4,
                           justification='left')],
-                [sg.Text(textos_grupo(*(lg[i]))[1],
+                [sg.Text(textos_grupo(*(lg[i]))[1], size=(30, 18),
                          justification='center', font=ft),
-                 sg.Text(textos_grupo(*(lg[i]))[2],
+                 sg.Text(textos_grupo(*(lg[i]))[2], size=(30, 18),
                          justification='center', font=ft),
-                 sg.Text(textos_grupo(*(lg[i]))[3],
+                 sg.Text(textos_grupo(*(lg[i]))[3], size=(30, 18),
                          justification='center', font=ft)],
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                                layout, element_justification='c', size=tam)
 
     if i == 7:
@@ -160,16 +166,16 @@ while True:
                       auto_size_columns=True, hide_vertical_scroll=True,
                       font=ft, num_rows=4,
                       justification='left')],
-            [sg.Text(textos_grupo(*(lg[i]))[1],
+            [sg.Text(textos_grupo(*(lg[i]))[1], size=(30, 18),
                      justification='center', font=ft),
-             sg.Text(textos_grupo(*(lg[i]))[2],
+             sg.Text(textos_grupo(*(lg[i]))[2], size=(30, 18),
                      justification='center', font=ft),
-             sg.Text(textos_grupo(*(lg[i]))[3],
+             sg.Text(textos_grupo(*(lg[i]))[3], size=(30, 18),
                      justification='center', font=ft)],
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Oitavas')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Oitavas':
@@ -178,25 +184,25 @@ while True:
         layout = [
             [sg.Text(topo2,
                      font=ft)],
-            [sg.Text(lf[j],
+            [sg.Text(lf[j], size=(50, 22),
                      font=ft, justification='center')],
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Avançar':
         if j == 8:
-            topo2 = 'Fim da Simulação! - Gustavo Albuquerque 11/05/2021'
+            topo2 = 'Fim da Simulação! - Gustavo Albuquerque 13/05/2021'
             layout = [
-                [sg.Text(topo2, justification='center',
+                [sg.Text(topo2, size=(100, 10), justification='center',
                          font=ft)],
 
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Fim')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                                layout,
                                element_justification='c', size=(500, 500))
         else:
@@ -205,15 +211,15 @@ while True:
             layout = [
                 [sg.Text(topo2,
                          font=ft)],
-                [sg.Text(lf[j],
+                [sg.Text(lf[j], size=(50, 22),
                          font=ft, justification='center')],
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.3',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
                                layout, element_justification='c', size=tam)
 
     if eventos == 'Fim':
         janela.close()
 
-print('Código por Gustavo Albuquerque - 06/05/2021')
+print('Código por Gustavo Albuquerque - 13/05/2021')

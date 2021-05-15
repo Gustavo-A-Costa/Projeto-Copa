@@ -19,12 +19,25 @@ def sorteio_copa():
 
         #    for selecao in dados.split(','): Fazendo isso aqui, cada "Selecao"
         #    vira um item (str) depois da vírgula
+
         for selecao in dados.splitlines():  # as linhas são separadas aqui!
-            dados_sel = list(selecao.split(','))
+            dados1 = selecao.split(',')
+            dados_sel = []
+
+            for dado in dados1:
+                dadostrip = dado.strip()
+                dados_sel.append(dadostrip)
+
             # cada 'selecao é uma linha do arquivo. Para criar uma lista e
             # separar os conteúdos pelas virgulas, uso o split(',')
             dict_sel = {'País': dados_sel[0], 'Confederação': dados_sel[1],
-                        'Nível': dados_sel[2], 'Sede?': dados_sel[3]}
+                        'Nível': dados_sel[2], 'Sede?': dados_sel[3],
+                        'Jogadores': dados_sel[4:15]}
+            if (len(dict_sel.get('Jogadores'))) != 11:
+                print('Erro! Quantidade de jogares inválida:')
+                print(dict_sel.get('País'))
+                print(dict_sel.get('Jogadores'))
+                print('_______________________')
 
             if 'sede' in dict_sel.get('Sede?'):
                 pais_sede = dict_sel
@@ -154,68 +167,68 @@ def sorteio_copa():
 
     # VERIFICANDO SE HÁ NO MÁXIMO DOIS TIMES UEFA NO MESMO GRUPO
     # GRUPO A
-    SA_UEFA = confgrupoA.count(' UEFA')
-    SA_CAF = confgrupoA.count(' CAF')
-    SA_CONMEBOL = confgrupoA.count(' CONMEBOL')
-    SA_AFC = confgrupoA.count(' AFC')
-    SA_CONCACAF = confgrupoA.count(' CONCACAF')
-    SA_OFC = confgrupoA.count(' OFC')
+    SA_UEFA = confgrupoA.count('UEFA')
+    SA_CAF = confgrupoA.count('CAF')
+    SA_CONMEBOL = confgrupoA.count('CONMEBOL')
+    SA_AFC = confgrupoA.count('AFC')
+    SA_CONCACAF = confgrupoA.count('CONCACAF')
+    SA_OFC = confgrupoA.count('OFC')
 
     # GRUPO B
-    SB_UEFA = confgrupoB.count(' UEFA')
-    SB_CAF = confgrupoB.count(' CAF')
-    SB_CONMEBOL = confgrupoB.count(' CONMEBOL')
-    SB_AFC = confgrupoB.count(' AFC')
-    SB_CONCACAF = confgrupoB.count(' CONCACAF')
-    SB_OFC = confgrupoB.count(' OFC')
+    SB_UEFA = confgrupoB.count('UEFA')
+    SB_CAF = confgrupoB.count('CAF')
+    SB_CONMEBOL = confgrupoB.count('CONMEBOL')
+    SB_AFC = confgrupoB.count('AFC')
+    SB_CONCACAF = confgrupoB.count('CONCACAF')
+    SB_OFC = confgrupoB.count('OFC')
 
     # GRUPO C
-    SC_UEFA = confgrupoC.count(' UEFA')
-    SC_CAF = confgrupoC.count(' CAF')
-    SC_CONMEBOL = confgrupoC.count(' CONMEBOL')
-    SC_AFC = confgrupoC.count(' AFC')
-    SC_CONCACAF = confgrupoC.count(' CONCACAF')
-    SC_OFC = confgrupoC.count(' OFC')
+    SC_UEFA = confgrupoC.count('UEFA')
+    SC_CAF = confgrupoC.count('CAF')
+    SC_CONMEBOL = confgrupoC.count('CONMEBOL')
+    SC_AFC = confgrupoC.count('AFC')
+    SC_CONCACAF = confgrupoC.count('CONCACAF')
+    SC_OFC = confgrupoC.count('OFC')
 
     # GRUPO D
-    SD_UEFA = confgrupoD.count(' UEFA')
-    SD_CAF = confgrupoD.count(' CAF')
-    SD_CONMEBOL = confgrupoD.count(' CONMEBOL')
-    SD_AFC = confgrupoD.count(' AFC')
-    SD_CONCACAF = confgrupoD.count(' CONCACAF')
-    SD_OFC = confgrupoD.count(' OFC')
+    SD_UEFA = confgrupoD.count('UEFA')
+    SD_CAF = confgrupoD.count('CAF')
+    SD_CONMEBOL = confgrupoD.count('CONMEBOL')
+    SD_AFC = confgrupoD.count('AFC')
+    SD_CONCACAF = confgrupoD.count('CONCACAF')
+    SD_OFC = confgrupoD.count('OFC')
 
     # GRUPO E
-    SE_UEFA = confgrupoE.count(' UEFA')
-    SE_CAF = confgrupoE.count(' CAF')
-    SE_CONMEBOL = confgrupoE.count(' CONMEBOL')
-    SE_AFC = confgrupoE.count(' AFC')
-    SE_CONCACAF = confgrupoE.count(' CONCACAF')
-    SE_OFC = confgrupoE.count(' OFC')
+    SE_UEFA = confgrupoE.count('UEFA')
+    SE_CAF = confgrupoE.count('CAF')
+    SE_CONMEBOL = confgrupoE.count('CONMEBOL')
+    SE_AFC = confgrupoE.count('AFC')
+    SE_CONCACAF = confgrupoE.count('CONCACAF')
+    SE_OFC = confgrupoE.count('OFC')
 
     # GRUPO F
-    SF_UEFA = confgrupoF.count(' UEFA')
-    SF_CAF = confgrupoF.count(' CAF')
-    SF_CONMEBOL = confgrupoF.count(' CONMEBOL')
-    SF_AFC = confgrupoF.count(' AFC')
-    SF_CONCACAF = confgrupoF.count(' CONCACAF')
-    SF_OFC = confgrupoF.count(' OFC')
+    SF_UEFA = confgrupoF.count('UEFA')
+    SF_CAF = confgrupoF.count('CAF')
+    SF_CONMEBOL = confgrupoF.count('CONMEBOL')
+    SF_AFC = confgrupoF.count('AFC')
+    SF_CONCACAF = confgrupoF.count('CONCACAF')
+    SF_OFC = confgrupoF.count('OFC')
 
     # GRUPO G
-    SG_UEFA = confgrupoG.count(' UEFA')
-    SG_CAF = confgrupoG.count(' CAF')
-    SG_CONMEBOL = confgrupoG.count(' CONMEBOL')
-    SG_AFC = confgrupoG.count(' AFC')
-    SG_CONCACAF = confgrupoG.count(' CONCACAF')
-    SG_OFC = confgrupoG.count(' OFC')
+    SG_UEFA = confgrupoG.count('UEFA')
+    SG_CAF = confgrupoG.count('CAF')
+    SG_CONMEBOL = confgrupoG.count('CONMEBOL')
+    SG_AFC = confgrupoG.count('AFC')
+    SG_CONCACAF = confgrupoG.count('CONCACAF')
+    SG_OFC = confgrupoG.count('OFC')
 
     # GRUPO H
-    SH_UEFA = confgrupoH.count(' UEFA')
-    SH_CAF = confgrupoH.count(' CAF')
-    SH_CONMEBOL = confgrupoH.count(' CONMEBOL')
-    SH_AFC = confgrupoH.count(' AFC')
-    SH_CONCACAF = confgrupoH.count(' CONCACAF')
-    SH_OFC = confgrupoH.count(' OFC')
+    SH_UEFA = confgrupoH.count('UEFA')
+    SH_CAF = confgrupoH.count('CAF')
+    SH_CONMEBOL = confgrupoH.count('CONMEBOL')
+    SH_AFC = confgrupoH.count('AFC')
+    SH_CONCACAF = confgrupoH.count('CONCACAF')
+    SH_OFC = confgrupoH.count('OFC')
 
     if (SA_UEFA > 2 or SB_UEFA > 2 or SC_UEFA > 2 or SD_UEFA > 2 or
             SE_UEFA > 2 or SF_UEFA > 2 or SG_UEFA > 2 or SH_UEFA > 2):

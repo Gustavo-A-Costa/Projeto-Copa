@@ -5,7 +5,8 @@ import operator
 def tabela_grupos(grupo):
     PA0, PA1, PA2, PA3 = 0, 0, 0, 0
 
-    A1J1 = resultado(int(grupo[0]['Nível']), int(grupo[1]['Nível']))
+    A1J1 = resultado(int(grupo[0]['Nível']), int(grupo[1]['Nível']),
+                     (grupo[0]['Jogadores']), (grupo[1]['Jogadores']))
 
     # Estrutura de pontuação da partida:
     if A1J1[0] > A1J1[1]:
@@ -16,7 +17,8 @@ def tabela_grupos(grupo):
         PA0 = PA0 + 1
         PA1 = PA1 + 1
     # FIM DO JOGO 1
-    A1J2 = resultado(int(grupo[2]['Nível']), int(grupo[3]['Nível']))
+    A1J2 = resultado(int(grupo[2]['Nível']), int(grupo[3]['Nível']),
+                     (grupo[2]['Jogadores']), (grupo[3]['Jogadores']))
 
     # Estrutura de pontuação da partida:
     if A1J2[0] > A1J2[1]:
@@ -30,7 +32,8 @@ def tabela_grupos(grupo):
 
     # Grupo A, rodada 2:
 
-    A2J1 = resultado(int(grupo[0]['Nível']), int(grupo[2]['Nível']))
+    A2J1 = resultado(int(grupo[0]['Nível']), int(grupo[2]['Nível']),
+                     (grupo[0]['Jogadores']), (grupo[2]['Jogadores']))
 
     # Estrutura de pontuação da partida:
     if A2J1[0] > A2J1[1]:
@@ -42,8 +45,8 @@ def tabela_grupos(grupo):
         PA2 = PA2 + 1
     # FIM DO JOGO 1
 
-    A2J2 = resultado(int(grupo[1]['Nível']), int(grupo[3]['Nível']))
-
+    A2J2 = resultado(int(grupo[1]['Nível']), int(grupo[3]['Nível']),
+                     (grupo[1]['Jogadores']), (grupo[3]['Jogadores']))
     # Estrutura de pontuação da partida:
     if A2J2[0] > A2J2[1]:
         PA1 = PA1 + 3
@@ -55,7 +58,8 @@ def tabela_grupos(grupo):
     # FIM DO JOGO 2
 
     # Grupo A, rodada 3:
-    A3J1 = resultado(int(grupo[0]['Nível']), int(grupo[3]['Nível']))
+    A3J1 = resultado(int(grupo[0]['Nível']), int(grupo[3]['Nível']),
+                     (grupo[0]['Jogadores']), (grupo[3]['Jogadores']))
 
     # Estrutura de pontuação da partida:
     if A3J1[0] > A3J1[1]:
@@ -67,8 +71,8 @@ def tabela_grupos(grupo):
         PA3 = PA3 + 1
     # FIM DO JOGO 1
 
-    A3J2 = resultado(int(grupo[1]['Nível']), int(grupo[2]['Nível']))
-
+    A3J2 = resultado(int(grupo[1]['Nível']), int(grupo[2]['Nível']),
+                     (grupo[1]['Jogadores']), (grupo[2]['Jogadores']))
     # Estrutura de pontuação da partida:
     if A3J2[0] > A3J2[1]:
         PA1 = PA1 + 3
@@ -137,22 +141,34 @@ def textos_grupo(cla, j, m):
     texto_1rod = f"""
     \nPRIMEIRA RODADA:\n
     {j['R1'][0][0]} {j['R1'][0][1]} x {j['R1'][0][2]} {j['R1'][0][3]}\n
-    Gols: {m[0]} / {m[1]}\n
+    Gols:
+    {j['R1'][0][0][0:3].upper()}: {m[0]}
+    {j['R1'][0][3][0:3].upper()}: {m[1]}\n
     {j['R1'][1][0]} {j['R1'][1][1]} x {j['R1'][1][2]} {j['R1'][1][3]}\n
-    Gols: {m[2]} / {m[3]}\n
+    Gols:
+    {j['R1'][1][0][0:3].upper()}: {m[2]}
+    {j['R1'][1][3][0:3].upper()}: {m[3]}
     """
     texto_2rod = f"""
     \nSEGUNDA RODADA:\n
     {j['R2'][0][0]} {j['R2'][0][1]} x {j['R2'][0][2]} {j['R2'][0][3]}\n
-    Gols: {m[4]} / {m[5]}\n
+    Gols:
+    {j['R2'][0][0][0:3].upper()}: {m[4]}
+    {j['R2'][0][3][0:3].upper()}: {m[5]}\n
     {j['R2'][1][0]} {j['R2'][1][1]} x {j['R2'][1][2]} {j['R2'][1][3]}\n
-    Gols: {m[6]} / {m[7]}\n
+    Gols:
+    {j['R2'][1][0][0:3].upper()}: {m[6]}
+    {j['R2'][1][3][0:3].upper()}: {m[7]}
     """
     texto_3rod = f"""
     \nTERCEIRA RODADA:\n
     {j['R3'][0][0]} {j['R3'][0][1]} x {j['R3'][0][2]} {j['R3'][0][3]}\n
-    Gols: {m[8]} / {m[9]}\n
+    Gols:
+    {j['R3'][0][0][0:3].upper()}: {m[8]}
+    {j['R3'][0][3][0:3].upper()}: {m[9]}\n
     {j['R3'][1][0]} {j['R3'][1][1]} x {j['R3'][1][2]} {j['R3'][1][3]}\n
-    Gols: {m[10]} / {m[11]}\n
+    Gols:
+    {j['R3'][1][0][0:3].upper()}: {m[10]}
+    {j['R3'][1][3][0:3].upper()}: {m[11]}
     """
     return [texto_classif, texto_1rod, texto_2rod, texto_3rod]

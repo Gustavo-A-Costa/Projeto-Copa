@@ -47,71 +47,71 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     for time in timesA:
         if time['País'] == classif_A[0][0]:
-            A1 = [time['País'], time['Nível']]
+            A1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesA:
         if time['País'] == classif_A[1][0]:
-            A2 = [time['País'], time['Nível']]
+            A2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesB:
         if time['País'] == classif_B[0][0]:
-            B1 = [time['País'], time['Nível']]
+            B1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesB:
         if time['País'] == classif_B[1][0]:
-            B2 = [time['País'], time['Nível']]
+            B2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesC:
         if time['País'] == classif_C[0][0]:
-            C1 = [time['País'], time['Nível']]
+            C1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesC:
         if time['País'] == classif_C[1][0]:
-            C2 = [time['País'], time['Nível']]
+            C2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesD:
         if time['País'] == classif_D[0][0]:
-            D1 = [time['País'], time['Nível']]
+            D1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesD:
         if time['País'] == classif_D[1][0]:
-            D2 = [time['País'], time['Nível']]
+            D2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesE:
         if time['País'] == classif_E[0][0]:
-            E1 = [time['País'], time['Nível']]
+            E1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesE:
         if time['País'] == classif_E[1][0]:
-            E2 = [time['País'], time['Nível']]
+            E2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesF:
         if time['País'] == classif_F[0][0]:
-            F1 = [time['País'], time['Nível']]
+            F1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesF:
         if time['País'] == classif_F[1][0]:
-            F2 = [time['País'], time['Nível']]
+            F2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesG:
         if time['País'] == classif_G[0][0]:
-            G1 = [time['País'], time['Nível']]
+            G1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesG:
         if time['País'] == classif_G[1][0]:
-            G2 = [time['País'], time['Nível']]
+            G2 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesH:
         if time['País'] == classif_H[0][0]:
-            H1 = [time['País'], time['Nível']]
+            H1 = [time['País'], time['Nível'], time['Jogadores']]
 
     for time in timesH:
         if time['País'] == classif_H[1][0]:
-            H2 = [time['País'], time['Nível']]
+            H2 = [time['País'], time['Nível'], time['Jogadores']]
 
     # Jogo O1
 
-    O1 = resultado(int(A1[1]), int(B2[1]), pro=True)
+    O1 = resultado(int(A1[1]), int(B2[1]), A1[2], B2[2], pro=True, dec=True)
     pO1 = O1
 
     TO1 = ('\n{} {} x {} {}\n'.format(A1[0],
@@ -134,7 +134,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O2
 
-    O2 = resultado(int(C1[1]), int(D2[1]), pro=True)
+    O2 = resultado(int(C1[1]), int(D2[1]), C1[2], D2[2], pro=True, dec=True)
     pO2 = O2
 
     TO2 = ('\n{} {} x {} {}\n'.format(C1[0],
@@ -156,7 +156,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Fim do jogo O2
 
     # Jogo O3
-    O3 = resultado(int(E1[1]), int(F2[1]), pro=True)
+    O3 = resultado(int(E1[1]), int(F2[1]), E1[2], F2[2], pro=True, dec=True)
     pO3 = O3
 
     TO3 = ('\n{} {} x {} {}\n'.format(E1[0],
@@ -179,7 +179,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O4
 
-    O4 = resultado(int(G1[1]), int(H2[1]), pro=True)
+    O4 = resultado(int(G1[1]), int(H2[1]), G1[2], H2[2], pro=True, dec=True)
     pO4 = O4
 
     TO4 = ('\n{} {} x {} {}\n'.format(G1[0],
@@ -202,7 +202,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O5
 
-    O5 = resultado(int(B1[1]), int(A2[1]), pro=True)
+    O5 = resultado(int(B1[1]), int(A2[1]), B1[2], A2[2], pro=True, dec=True)
     pO5 = O5
 
     TO5 = ('\n{} {} x {} {}\n'.format(B1[0],
@@ -225,7 +225,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O6
 
-    O6 = resultado(int(D1[1]), int(C2[1]), pro=True)
+    O6 = resultado(int(D1[1]), int(C2[1]), D1[2], C2[2], pro=True, dec=True)
     pO6 = O6
 
     TO6 = ('\n{} {} x {} {}\n'.format(D1[0],
@@ -248,7 +248,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo O7
 
-    O7 = resultado(int(F1[1]), int(E2[1]), pro=True)
+    O7 = resultado(int(F1[1]), int(E2[1]), F1[2], E2[2], pro=True, dec=True)
     pO7 = O7
 
     TO7 = ('\n{} {} x {} {}\n'.format(F1[0],
@@ -271,7 +271,7 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # Fim do jogo O7
 
     # Jogo O8
-    O8 = resultado(int(H1[1]), int(G2[1]), pro=True)
+    O8 = resultado(int(H1[1]), int(G2[1]), H1[2], G2[2], pro=True, dec=True)
     pO8 = O8
 
     TO8 = ('\n{} {} x {} {}\n'.format(H1[0],
@@ -296,7 +296,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF1
 
-    QF1 = resultado(int(QF1_1[1]), int(QF1_2[1]), pro=True)
+    QF1 = resultado(int(QF1_1[1]), int(QF1_2[1]), QF1_1[2], QF1_2[2], pro=True,
+                    dec=True)
     pQF1 = QF1
 
     TQ1 = ('\n{} {} x {} {}\n'.format(QF1_1[0],
@@ -320,7 +321,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF2
 
-    QF2 = resultado(int(QF2_1[1]), int(QF2_2[1]), pro=True)
+    QF2 = resultado(int(QF2_1[1]), int(QF2_2[1]), QF2_1[2], QF2_2[2], pro=True,
+                    dec=True)
     pQF2 = QF2
 
     TQ2 = ('\n{} {} x {} {}\n'.format(QF2_1[0],
@@ -343,7 +345,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF3
 
-    QF3 = resultado(int(QF3_1[1]), int(QF3_2[1]), pro=True)
+    QF3 = resultado(int(QF3_1[1]), int(QF3_2[1]), QF3_1[2], QF3_2[2], pro=True,
+                    dec=True)
     pQF3 = QF3
 
     TQ3 = ('\n{} {} x {} {}\n'.format(QF3_1[0],
@@ -366,7 +369,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo QF4
 
-    QF4 = resultado(int(QF4_1[1]), int(QF4_2[1]), pro=True)
+    QF4 = resultado(int(QF4_1[1]), int(QF4_2[1]), QF4_1[2], QF4_2[2], pro=True,
+                    dec=True)
     pQF4 = QF4
 
     TQ4 = ('\n{} {} x {} {}\n'.format(QF4_1[0],
@@ -390,7 +394,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
     # SEMI FINAL
     # Jogo SF1
 
-    SF1 = resultado(int(SF1_1[1]), int(SF1_2[1]), pro=True)
+    SF1 = resultado(int(SF1_1[1]), int(SF1_2[1]), SF1_1[2], SF1_2[2], pro=True,
+                    dec=True)
     pSF1 = SF1
 
     TSF1 = ('\n{} {} x {} {}\n'.format(SF1_1[0],
@@ -417,7 +422,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo SF2
 
-    SF2 = resultado(int(SF2_1[1]), int(SF2_2[1]), pro=True)
+    SF2 = resultado(int(SF2_1[1]), int(SF2_2[1]), SF2_1[2], SF2_2[2], pro=True,
+                    dec=True)
     pSF2 = SF2
 
     TSF2 = ('\n{} {} x {} {}\n'.format(SF2_1[0],
@@ -444,7 +450,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo TL
 
-    TL = resultado(int(TL1[1]), int(TL2[1]), pro=True)
+    TL = resultado(int(TL1[1]), int(TL2[1]), TL1[2], TL2[2], pro=True,
+                   dec=True)
     pTL = TL
 
     TTL = ('\n{} {} x {} {}\n'.format(TL1[0],
@@ -475,7 +482,8 @@ def copa_mundo(grupos, RA, RB, RC, RD, RE, RF, RG, RH):
 
     # Jogo final
 
-    final = resultado(int(FINAL_1[1]), int(FINAL_2[1]), pro=True)
+    final = resultado(int(FINAL_1[1]), int(FINAL_2[1]),
+                      FINAL_1[2], FINAL_2[2], pro=True, dec=True)
     pfinal = final
 
     TFINAL = ('\n{} {} x {} {}\n'.format(FINAL_1[0],
@@ -527,89 +535,89 @@ def textos_matamata(oi1, oi2, oi3, oi4, oi5, oi6, oi7, oi8,
     texto_oi1 = f"""
     {oi1}
     {oi1p}
-    Gols: {m[0]} / {m[1]}
+    Gols: {m[0]} (X) {m[1]}
     _____________________________________________________
     {oi2}
     {oi2p}
-    Gols: {m[2]} / {m[3]}
+    Gols: {m[2]} (X) {m[3]}
     _____________________________________________________
     """
     texto_oi2 = f"""
     {oi3}
     {oi3p}
-    Gols: {m[4]} / {m[5]}
+    Gols: {m[4]} (X) {m[5]}
     _____________________________________________________
     {oi4}
     {oi4p}
-    Gols: {m[6]} / {m[7]}
+    Gols: {m[6]} (X) {m[7]}
     _____________________________________________________
     """
     texto_oi3 = f"""
     {oi5}
     {oi5p}
-    Gols: {m[8]} / {m[9]}
+    Gols: {m[8]} (X) {m[9]}
     _____________________________________________________
     {oi6}
     {oi6p}
-    Gols: {m[10]} / {m[11]}
+    Gols: {m[10]} (X) {m[11]}
     _____________________________________________________
     """
     texto_oi4 = f"""
     {oi7}
     {oi7p}
-    Gols: {m[12]} / {m[13]}
+    Gols: {m[12]} (X) {m[13]}
     _____________________________________________________
     {oi8}
     {oi8p}
-    Gols: {m[14]} / {m[15]}
+    Gols: {m[14]} (X) {m[15]}
     _____________________________________________________
     """
     texto_qua1 = f"""
     {ql1}
     {ql1p}
-    Gols: {m[16]} / {m[17]}
+    Gols: {m[16]} (X) {m[17]}
     _____________________________________________________
     {ql2}
     {ql2p}
-    Gols: {m[18]} / {m[19]}
+    Gols: {m[18]} (X) {m[19]}
     _____________________________________________________
     """
     texto_qua2 = f"""
     {ql3}
     {ql3p}
-    Gols: {m[20]} / {m[21]}
+    Gols: {m[20]} (X) {m[21]}
     _____________________________________________________
     {ql4}
     {ql4p}
-    Gols: {m[22]} / {m[23]}
+    Gols: {m[22]} (X) {m[23]}
     _____________________________________________________
     """
     texto_semi = f"""
     {se1}
     {se1p}
-    Gols: {m[24]} / {m[25]}
+    Gols: {m[24]} (X) {m[25]}
     _____________________________________________________
     {se2}
     {se2p}
-    Gols: {m[26]} / {m[27]}
+    Gols: {m[26]} (X) {m[27]}
     _____________________________________________________
     """
     texto_tl = f"""
     {ter}
     {terp}
-    Gols: {m[28]} / {m[29]}
+    Gols: {m[28]} (X) {m[29]}
     _____________________________________________________
     """
     texto_final = f"""
     {fin}
     {finp}
-    Gols: {m[30]} / {m[31]}
+    Gols: {m[30]} (X) {m[31]}
 
     _______________________________________
-    {camp} foi a seleção campeã!
-    {vice} foi a seleção vice-campeã
-    {terce} ficou em terceiro
-    {quart} ficou em quarto
+    {camp[0]} foi a seleção campeã!
+    {vice[0]} foi a seleção vice-campeã
+    {terce[0]} ficou em terceiro
+    {quart[0]} ficou em quarto
     """
 
     return [texto_oi1, texto_oi2, texto_oi3, texto_oi4,
