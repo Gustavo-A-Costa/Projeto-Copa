@@ -1,4 +1,4 @@
-# Código por Gustavo Albuquerque - 05/05/2021
+# Código por Gustavo Albuquerque - 10/2021
 from PySimpleGUI import PySimpleGUI as sg
 from sorteio import sorteio_copa, texto_sorteio
 from v2_simulador_grupos import tabela_grupos, textos_grupo
@@ -8,7 +8,7 @@ from v2_matamata import copa_mundo, textos_matamata
 ft = 'Bahnschrift'
 
 # tamanho da janela
-tam = (900, 600)
+tam = (1000, 1000)
 
 grupos = sorteio_copa()
 GA = tabela_grupos(grupos[0])
@@ -39,24 +39,37 @@ topo2 = f'{lfas[j]}'
 sg.theme('Dark Brown 1')
 menu_principal = [
                  [sg.Text('\n\n\n',
-                          size=(10000, 5),
+                          size=(10000, 1),
                           justification='center', font=ft)],
-                 [sg.Text('Simulador de Copa do Mundo (Iniciante)',
-                          size=(1000000, 5),
+                 [sg.Text('SIMULADOR DE COPA DO MUNDO',
+                          size=(10000, 1),
+                          justification='center', font=(ft, 25))],
+                 [sg.Text('v2.41',
+                          size=(4, 2),
+                          justification='center', font=(ft, 40))],
+                 [sg.Radio('Resolução 1: 600x700', "RADIO1", default=False,
+                           size=(22, 4), font=ft, key="RES1")],
+                 [sg.Radio('Resolução 2: 1200x700', "RADIO1", default=True,
+                           size=(22, 4), font=ft, key="RES2")],
+                 [sg.Radio('Resolução 3: 1600x900', "RADIO1", default=False,
+                           size=(22, 4), font=ft, key="RES3")],
+                 [sg.Text('\n\n\n',
+                          size=(10000, 1),
+                          justification='center', font=ft)],               
+                 [sg.Button('Começar!', font=(ft, 25), size=(10, 2))],
+                 [sg.Text('\n\n\n',
+                          size=(10000, 1),
                           justification='center', font=ft)],
-                 [sg.Text('v2.4',
-                          size=(4, 4),
+                 [sg.Text('Gustavo Albuquerque - V2.40: 13/05/2021 / 2.41: 29/10/2021',
+                          size=(1000, 1),
                           justification='center', font=ft)],
-                 [sg.Text('Gustavo Albuquerque - 13/05/2021',
-                          size=(100, 5),
-                          justification='center', font=ft)],
-                 [sg.Button('Começar!')],
 ]
 
 layout = menu_principal
 # janela
-janela = sg.Window('Simulador de Copa do Mundo V2.4', layout,
-                   element_justification='c', size=tam)
+janela = sg.Window('Simulador de Copa do Mundo V2.41', layout,
+                   element_justification='c', size=(600,600))
+
 cabecalho = ['País', 'Pontos', 'G. F.', 'G. S.', 'S. G.']
 # eventos
 while True:
@@ -83,8 +96,17 @@ while True:
                      justification='center', font=ft)],
             [sg.Button('Continuar!')]
         ]
+        if valores["RES1"] is True:
+                tam = (600, 700)
+        elif valores["RES2"] is True:
+                tam = (1200, 700)
+        elif valores["RES3"] is True:
+                tam = (1600, 900)
+        elif valores["TELA"] is True:
+                tam = "tela cheia"
+                
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                            layout, element_justification='c', size=tam)
     if eventos == sg.WINDOW_CLOSED:
         break
@@ -106,7 +128,7 @@ while True:
             [sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Próximo':
@@ -129,7 +151,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Voltar':
@@ -154,7 +176,7 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                                layout, element_justification='c', size=tam)
 
     if i == 7:
@@ -175,7 +197,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Oitavas')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Oitavas':
@@ -189,12 +211,12 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Avançar':
         if j == 8:
-            topo2 = 'Fim da Simulação! - Gustavo Albuquerque 13/05/2021'
+            topo2 = 'Fim da Simulação! - Gustavo Albuquerque 10/2021'
             layout = [
                 [sg.Text(topo2, size=(100, 10), justification='center',
                          font=ft)],
@@ -202,9 +224,9 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Fim')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                                layout,
-                               element_justification='c', size=(500, 500))
+                               element_justification='c', size=(600, 600))
         else:
             j = j + 1
             topo2 = f'{lfas[j]}'
@@ -216,10 +238,10 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.4',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.41',
                                layout, element_justification='c', size=tam)
 
     if eventos == 'Fim':
         janela.close()
 
-print('Código por Gustavo Albuquerque - 13/05/2021')
+print('Código por Gustavo Albuquerque - 10/2021')
