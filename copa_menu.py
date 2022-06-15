@@ -1,4 +1,4 @@
-# Código por Gustavo Albuquerque - 10/2021
+# Código por Gustavo Albuquerque - 10/2021 / 06/2022
 from sys import getfilesystemencoding
 from PySimpleGUI import PySimpleGUI as sg
 from sorteio import sorteio_copa, texto_sorteio
@@ -63,15 +63,23 @@ for selecoes in grupos[0]:
 # time 1 jogo 1
 for jog in GA[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[0][0:3].upper()
                 )
+        # AREA DE TESTES        
+        # print(jog.strip())
+        # print(re.sub("[0-9|,'()]", '', jog.strip()).strip() +
+        #      " - " +
+        #      paises_GA[0][0:3].upper())
+        # SOLUÇÃO ENCONTRADA!!!!
+
+
 
 # time 2 jogo 1
 for jog in GA[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[1][0:3].upper()
                 )
@@ -79,7 +87,7 @@ for jog in GA[2][1].split("||"):
 # time 1 jogo 2
 for jog in GA[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[2][0:3].upper()
                 )
@@ -87,7 +95,7 @@ for jog in GA[2][2].split("||"):
 # time 2 jogo 2
 for jog in GA[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[3][0:3].upper()
                 )
@@ -95,7 +103,7 @@ for jog in GA[2][3].split("||"):
 # time 1 jogo 3
 for jog in GA[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[0][0:3].upper()
                 )
@@ -103,7 +111,7 @@ for jog in GA[2][4].split("||"):
 # time 2 jogo 3
 for jog in GA[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[2][0:3].upper()
                 )
@@ -111,7 +119,7 @@ for jog in GA[2][5].split("||"):
 # time 1 jogo 4
 for jog in GA[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[1][0:3].upper()
                 )
@@ -119,7 +127,7 @@ for jog in GA[2][6].split("||"):
 # time 2 jogo 4
 for jog in GA[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[3][0:3].upper()
                 )
@@ -127,7 +135,7 @@ for jog in GA[2][7].split("||"):
 # time 1 jogo 5
 for jog in GA[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[0][0:3].upper()
                 )
@@ -135,7 +143,7 @@ for jog in GA[2][8].split("||"):
 # time 2 jogo 5
 for jog in GA[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[3][0:3].upper()
                 )
@@ -143,7 +151,7 @@ for jog in GA[2][9].split("||"):
 # time 1 jogo 6
 for jog in GA[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[1][0:3].upper()
                 )
@@ -151,7 +159,7 @@ for jog in GA[2][10].split("||"):
 # time 2 jogo 6
 for jog in GA[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GA[2][0:3].upper()
                 )
@@ -166,7 +174,7 @@ for selecoes in grupos[1]:
 # time 1 jogo 1
 for jog in GB[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[0][0:3].upper()
                 )
@@ -174,7 +182,7 @@ for jog in GB[2][0].split("||"):
 # time 2 jogo 1
 for jog in GB[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[1][0:3].upper()
                 )
@@ -182,7 +190,7 @@ for jog in GB[2][1].split("||"):
 # time 1 jogo 2
 for jog in GB[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[2][0:3].upper()
                 )
@@ -190,7 +198,7 @@ for jog in GB[2][2].split("||"):
 # time 2 jogo 2
 for jog in GB[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[3][0:3].upper()
                 )
@@ -198,7 +206,7 @@ for jog in GB[2][3].split("||"):
 # time 1 jogo 3
 for jog in GB[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[0][0:3].upper()
                 )
@@ -206,7 +214,7 @@ for jog in GB[2][4].split("||"):
 # time 2 jogo 3
 for jog in GB[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[2][0:3].upper()
                 )
@@ -214,7 +222,7 @@ for jog in GB[2][5].split("||"):
 # time 1 jogo 4
 for jog in GB[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[1][0:3].upper()
                 )
@@ -222,7 +230,7 @@ for jog in GB[2][6].split("||"):
 # time 2 jogo 4
 for jog in GB[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[3][0:3].upper()
                 )
@@ -230,7 +238,7 @@ for jog in GB[2][7].split("||"):
 # time 1 jogo 5
 for jog in GB[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[0][0:3].upper()
                 )
@@ -238,7 +246,7 @@ for jog in GB[2][8].split("||"):
 # time 2 jogo 5
 for jog in GB[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[3][0:3].upper()
                 )
@@ -246,7 +254,7 @@ for jog in GB[2][9].split("||"):
 # time 1 jogo 6
 for jog in GB[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[1][0:3].upper()
                 )
@@ -254,7 +262,7 @@ for jog in GB[2][10].split("||"):
 # time 2 jogo 6
 for jog in GB[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GB[2][0:3].upper()
                 )
@@ -269,7 +277,7 @@ for selecoes in grupos[2]:
 # time 1 jogo 1
 for jog in GC[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[0][0:3].upper()
                 )
@@ -277,7 +285,7 @@ for jog in GC[2][0].split("||"):
 # time 2 jogo 1
 for jog in GC[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[1][0:3].upper()
                 )
@@ -285,7 +293,7 @@ for jog in GC[2][1].split("||"):
 # time 1 jogo 2
 for jog in GC[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[2][0:3].upper()
                 )
@@ -293,7 +301,7 @@ for jog in GC[2][2].split("||"):
 # time 2 jogo 2
 for jog in GC[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[3][0:3].upper()
                 )
@@ -301,7 +309,7 @@ for jog in GC[2][3].split("||"):
 # time 1 jogo 3
 for jog in GC[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[0][0:3].upper()
                 )
@@ -309,7 +317,7 @@ for jog in GC[2][4].split("||"):
 # time 2 jogo 3
 for jog in GC[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[2][0:3].upper()
                 )
@@ -317,7 +325,7 @@ for jog in GC[2][5].split("||"):
 # time 1 jogo 4
 for jog in GC[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[1][0:3].upper()
                 )
@@ -325,7 +333,7 @@ for jog in GC[2][6].split("||"):
 # time 2 jogo 4
 for jog in GC[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[3][0:3].upper()
                 )
@@ -333,7 +341,7 @@ for jog in GC[2][7].split("||"):
 # time 1 jogo 5
 for jog in GC[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[0][0:3].upper()
                 )
@@ -341,7 +349,7 @@ for jog in GC[2][8].split("||"):
 # time 2 jogo 5
 for jog in GC[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[3][0:3].upper()
                 )
@@ -349,7 +357,7 @@ for jog in GC[2][9].split("||"):
 # time 1 jogo 6
 for jog in GC[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[1][0:3].upper()
                 )
@@ -357,7 +365,7 @@ for jog in GC[2][10].split("||"):
 # time 2 jogo 6
 for jog in GC[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GC[2][0:3].upper()
                 )
@@ -371,7 +379,7 @@ for selecoes in grupos[3]:
 # time 1 jogo 1
 for jog in GD[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[0][0:3].upper()
                 )
@@ -379,7 +387,7 @@ for jog in GD[2][0].split("||"):
 # time 2 jogo 1
 for jog in GD[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[1][0:3].upper()
                 )
@@ -387,7 +395,7 @@ for jog in GD[2][1].split("||"):
 # time 1 jogo 2
 for jog in GD[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[2][0:3].upper()
                 )
@@ -395,7 +403,7 @@ for jog in GD[2][2].split("||"):
 # time 2 jogo 2
 for jog in GD[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[3][0:3].upper()
                 )
@@ -403,7 +411,7 @@ for jog in GD[2][3].split("||"):
 # time 1 jogo 3
 for jog in GD[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[0][0:3].upper()
                 )
@@ -411,7 +419,7 @@ for jog in GD[2][4].split("||"):
 # time 2 jogo 3
 for jog in GD[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[2][0:3].upper()
                 )
@@ -419,7 +427,7 @@ for jog in GD[2][5].split("||"):
 # time 1 jogo 4
 for jog in GD[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[1][0:3].upper()
                 )
@@ -427,7 +435,7 @@ for jog in GD[2][6].split("||"):
 # time 2 jogo 4
 for jog in GD[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[3][0:3].upper()
                 )
@@ -435,7 +443,7 @@ for jog in GD[2][7].split("||"):
 # time 1 jogo 5
 for jog in GD[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[0][0:3].upper()
                 )
@@ -443,7 +451,7 @@ for jog in GD[2][8].split("||"):
 # time 2 jogo 5
 for jog in GD[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[3][0:3].upper()
                 )
@@ -451,7 +459,7 @@ for jog in GD[2][9].split("||"):
 # time 1 jogo 6
 for jog in GD[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[1][0:3].upper()
                 )
@@ -459,7 +467,7 @@ for jog in GD[2][10].split("||"):
 # time 2 jogo 6
 for jog in GD[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GD[2][0:3].upper()
                 )
@@ -474,7 +482,7 @@ for selecoes in grupos[4]:
 # time 1 jogo 1
 for jog in GE[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[0][0:3].upper()
                 )
@@ -482,7 +490,7 @@ for jog in GE[2][0].split("||"):
 # time 2 jogo 1
 for jog in GE[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[1][0:3].upper()
                 )
@@ -490,7 +498,7 @@ for jog in GE[2][1].split("||"):
 # time 1 jogo 2
 for jog in GE[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[2][0:3].upper()
                 )
@@ -498,7 +506,7 @@ for jog in GE[2][2].split("||"):
 # time 2 jogo 2
 for jog in GE[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[3][0:3].upper()
                 )
@@ -506,7 +514,7 @@ for jog in GE[2][3].split("||"):
 # time 1 jogo 3
 for jog in GE[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[0][0:3].upper()
                 )
@@ -514,7 +522,7 @@ for jog in GE[2][4].split("||"):
 # time 2 jogo 3
 for jog in GE[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[2][0:3].upper()
                 )
@@ -522,7 +530,7 @@ for jog in GE[2][5].split("||"):
 # time 1 jogo 4
 for jog in GE[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[1][0:3].upper()
                 )
@@ -530,7 +538,7 @@ for jog in GE[2][6].split("||"):
 # time 2 jogo 4
 for jog in GE[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[3][0:3].upper()
                 )
@@ -538,7 +546,7 @@ for jog in GE[2][7].split("||"):
 # time 1 jogo 5
 for jog in GE[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[0][0:3].upper()
                 )
@@ -546,7 +554,7 @@ for jog in GE[2][8].split("||"):
 # time 2 jogo 5
 for jog in GE[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[3][0:3].upper()
                 )
@@ -554,7 +562,7 @@ for jog in GE[2][9].split("||"):
 # time 1 jogo 6
 for jog in GE[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[1][0:3].upper()
                 )
@@ -562,7 +570,7 @@ for jog in GE[2][10].split("||"):
 # time 2 jogo 6
 for jog in GE[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GE[2][0:3].upper()
                 )
@@ -576,7 +584,7 @@ for selecoes in grupos[5]:
 # time 1 jogo 1
 for jog in GF[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[0][0:3].upper()
                 )
@@ -584,7 +592,7 @@ for jog in GF[2][0].split("||"):
 # time 2 jogo 1
 for jog in GF[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[1][0:3].upper()
                 )
@@ -592,7 +600,7 @@ for jog in GF[2][1].split("||"):
 # time 1 jogo 2
 for jog in GF[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[2][0:3].upper()
                 )
@@ -600,7 +608,7 @@ for jog in GF[2][2].split("||"):
 # time 2 jogo 2
 for jog in GF[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[3][0:3].upper()
                 )
@@ -608,7 +616,7 @@ for jog in GF[2][3].split("||"):
 # time 1 jogo 3
 for jog in GF[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[0][0:3].upper()
                 )
@@ -616,7 +624,7 @@ for jog in GF[2][4].split("||"):
 # time 2 jogo 3
 for jog in GF[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[2][0:3].upper()
                 )
@@ -624,7 +632,7 @@ for jog in GF[2][5].split("||"):
 # time 1 jogo 4
 for jog in GF[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[1][0:3].upper()
                 )
@@ -632,7 +640,7 @@ for jog in GF[2][6].split("||"):
 # time 2 jogo 4
 for jog in GF[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[3][0:3].upper()
                 )
@@ -640,7 +648,7 @@ for jog in GF[2][7].split("||"):
 # time 1 jogo 5
 for jog in GF[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[0][0:3].upper()
                 )
@@ -648,7 +656,7 @@ for jog in GF[2][8].split("||"):
 # time 2 jogo 5
 for jog in GF[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[3][0:3].upper()
                 )
@@ -656,7 +664,7 @@ for jog in GF[2][9].split("||"):
 # time 1 jogo 6
 for jog in GF[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[1][0:3].upper()
                 )
@@ -664,7 +672,7 @@ for jog in GF[2][10].split("||"):
 # time 2 jogo 6
 for jog in GF[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GF[2][0:3].upper()
                 )
@@ -679,7 +687,7 @@ for selecoes in grupos[6]:
 # time 1 jogo 1
 for jog in GG[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[0][0:3].upper()
                 )
@@ -687,7 +695,7 @@ for jog in GG[2][0].split("||"):
 # time 2 jogo 1
 for jog in GG[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[1][0:3].upper()
                 )
@@ -695,7 +703,7 @@ for jog in GG[2][1].split("||"):
 # time 1 jogo 2
 for jog in GG[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[2][0:3].upper()
                 )
@@ -703,7 +711,7 @@ for jog in GG[2][2].split("||"):
 # time 2 jogo 2
 for jog in GG[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[3][0:3].upper()
                 )
@@ -711,7 +719,7 @@ for jog in GG[2][3].split("||"):
 # time 1 jogo 3
 for jog in GG[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[0][0:3].upper()
                 )
@@ -719,7 +727,7 @@ for jog in GG[2][4].split("||"):
 # time 2 jogo 3
 for jog in GG[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[2][0:3].upper()
                 )
@@ -727,7 +735,7 @@ for jog in GG[2][5].split("||"):
 # time 1 jogo 4
 for jog in GG[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[1][0:3].upper()
                 )
@@ -735,7 +743,7 @@ for jog in GG[2][6].split("||"):
 # time 2 jogo 4
 for jog in GG[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[3][0:3].upper()
                 )
@@ -743,7 +751,7 @@ for jog in GG[2][7].split("||"):
 # time 1 jogo 5
 for jog in GG[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[0][0:3].upper()
                 )
@@ -751,7 +759,7 @@ for jog in GG[2][8].split("||"):
 # time 2 jogo 5
 for jog in GG[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[3][0:3].upper()
                 )
@@ -759,7 +767,7 @@ for jog in GG[2][9].split("||"):
 # time 1 jogo 6
 for jog in GG[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[1][0:3].upper()
                 )
@@ -767,7 +775,7 @@ for jog in GG[2][10].split("||"):
 # time 2 jogo 6
 for jog in GG[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GG[2][0:3].upper()
                 )
@@ -782,7 +790,7 @@ for selecoes in grupos[7]:
 # time 1 jogo 1
 for jog in GH[2][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[0][0:3].upper()
                 )
@@ -790,7 +798,7 @@ for jog in GH[2][0].split("||"):
 # time 2 jogo 1
 for jog in GH[2][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[1][0:3].upper()
                 )
@@ -798,7 +806,7 @@ for jog in GH[2][1].split("||"):
 # time 1 jogo 2
 for jog in GH[2][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[2][0:3].upper()
                 )
@@ -806,7 +814,7 @@ for jog in GH[2][2].split("||"):
 # time 2 jogo 2
 for jog in GH[2][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[3][0:3].upper()
                 )
@@ -814,7 +822,7 @@ for jog in GH[2][3].split("||"):
 # time 1 jogo 3
 for jog in GH[2][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[0][0:3].upper()
                 )
@@ -822,7 +830,7 @@ for jog in GH[2][4].split("||"):
 # time 2 jogo 3
 for jog in GH[2][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[2][0:3].upper()
                 )
@@ -830,7 +838,7 @@ for jog in GH[2][5].split("||"):
 # time 1 jogo 4
 for jog in GH[2][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[1][0:3].upper()
                 )
@@ -838,7 +846,7 @@ for jog in GH[2][6].split("||"):
 # time 2 jogo 4
 for jog in GH[2][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[3][0:3].upper()
                 )
@@ -846,7 +854,7 @@ for jog in GH[2][7].split("||"):
 # time 1 jogo 5
 for jog in GH[2][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[0][0:3].upper()
                 )
@@ -854,7 +862,7 @@ for jog in GH[2][8].split("||"):
 # time 2 jogo 5
 for jog in GH[2][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[3][0:3].upper()
                 )
@@ -862,7 +870,7 @@ for jog in GH[2][9].split("||"):
 # time 1 jogo 6
 for jog in GH[2][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[1][0:3].upper()
                 )
@@ -870,7 +878,7 @@ for jog in GH[2][10].split("||"):
 # time 2 jogo 6
 for jog in GH[2][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_GH[2][0:3].upper()
                 )
@@ -885,11 +893,11 @@ for jog in GH[2][11].split("||"):
 # OITAVAS Jogo 1
 for sel2 in copa[0].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][0].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[0][0:3].upper()
                 )
@@ -897,7 +905,7 @@ for jog in copa[36][0].split("||"):
 # time 2
 for jog in copa[36][1].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[1][0:3].upper()
                 )
@@ -905,11 +913,11 @@ for jog in copa[36][1].split("||"):
 # OITAVAS Jogo 2
 for sel2 in copa[1].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][2].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[2][0:3].upper()
                 )
@@ -917,7 +925,7 @@ for jog in copa[36][2].split("||"):
 # time 2
 for jog in copa[36][3].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[3][0:3].upper()
                 )
@@ -925,11 +933,11 @@ for jog in copa[36][3].split("||"):
 # OITAVAS Jogo 3
 for sel2 in copa[2].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][4].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[4][0:3].upper()
                 )
@@ -937,7 +945,7 @@ for jog in copa[36][4].split("||"):
 # time 2
 for jog in copa[36][5].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[5][0:3].upper()
                 )
@@ -945,11 +953,11 @@ for jog in copa[36][5].split("||"):
 # OITAVAS Jogo 4
 for sel2 in copa[3].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][6].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[6][0:3].upper()
                 )
@@ -957,7 +965,7 @@ for jog in copa[36][6].split("||"):
 # time 2
 for jog in copa[36][7].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[7][0:3].upper()
                 )
@@ -965,11 +973,11 @@ for jog in copa[36][7].split("||"):
 # OITAVAS Jogo 5
 for sel2 in copa[4].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][8].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[8][0:3].upper()
                 )
@@ -977,7 +985,7 @@ for jog in copa[36][8].split("||"):
 # time 2
 for jog in copa[36][9].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[9][0:3].upper()
                 )
@@ -985,11 +993,11 @@ for jog in copa[36][9].split("||"):
 # OITAVAS Jogo 6
 for sel2 in copa[5].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][10].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[10][0:3].upper()
                 )
@@ -997,7 +1005,7 @@ for jog in copa[36][10].split("||"):
 # time 2
 for jog in copa[36][11].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[11][0:3].upper()
                 )
@@ -1005,11 +1013,11 @@ for jog in copa[36][11].split("||"):
 # OITAVAS Jogo 7
 for sel2 in copa[6].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][12].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[12][0:3].upper()
                 )
@@ -1017,7 +1025,7 @@ for jog in copa[36][12].split("||"):
 # time 2
 for jog in copa[36][13].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[13][0:3].upper()
                 )
@@ -1025,11 +1033,11 @@ for jog in copa[36][13].split("||"):
 # OITAVAS Jogo 8
 for sel2 in copa[7].split(" x "):
         paises_oitavas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][14].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[14][0:3].upper()
                 )
@@ -1037,7 +1045,7 @@ for jog in copa[36][14].split("||"):
 # time 2
 for jog in copa[36][15].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_oitavas[15][0:3].upper()
                 )
@@ -1045,11 +1053,11 @@ for jog in copa[36][15].split("||"):
 # QUARTAS Jogo 1
 for sel2 in copa[16].split(" x "):
         paises_quartas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][16].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[0][0:3].upper()
                 )
@@ -1057,7 +1065,7 @@ for jog in copa[36][16].split("||"):
 # time 2
 for jog in copa[36][17].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[1][0:3].upper()
                 )
@@ -1065,11 +1073,11 @@ for jog in copa[36][17].split("||"):
 # QUARTAS Jogo 2
 for sel2 in copa[17].split(" x "):
         paises_quartas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][18].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[2][0:3].upper()
                 )
@@ -1077,7 +1085,7 @@ for jog in copa[36][18].split("||"):
 # time 2
 for jog in copa[36][19].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[3][0:3].upper()
                 )
@@ -1085,11 +1093,11 @@ for jog in copa[36][19].split("||"):
 # QUARTAS Jogo 3
 for sel2 in copa[18].split(" x "):
         paises_quartas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][20].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[4][0:3].upper()
                 )
@@ -1097,7 +1105,7 @@ for jog in copa[36][20].split("||"):
 # time 2
 for jog in copa[36][21].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[5][0:3].upper()
                 )
@@ -1105,11 +1113,11 @@ for jog in copa[36][21].split("||"):
 # QUARTAS Jogo 4
 for sel2 in copa[19].split(" x "):
         paises_quartas.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][22].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[6][0:3].upper()
                 )
@@ -1117,7 +1125,7 @@ for jog in copa[36][22].split("||"):
 # time 2
 for jog in copa[36][23].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_quartas[7][0:3].upper()
                 )
@@ -1125,11 +1133,11 @@ for jog in copa[36][23].split("||"):
 # SEMI FINAL 1
 for sel2 in copa[20].split(" x "):
         paises_semi.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][24].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_semi[0][0:3].upper()
                 )
@@ -1137,7 +1145,7 @@ for jog in copa[36][24].split("||"):
 # time 2
 for jog in copa[36][25].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_semi[1][0:3].upper()
                 )
@@ -1145,11 +1153,11 @@ for jog in copa[36][25].split("||"):
 # SEMI FINAL 2
 for sel2 in copa[21].split(" x "):
         paises_semi.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][26].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_semi[2][0:3].upper()
                 )
@@ -1157,7 +1165,7 @@ for jog in copa[36][26].split("||"):
 # time 2
 for jog in copa[36][27].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_semi[3][0:3].upper()
                 )
@@ -1165,11 +1173,11 @@ for jog in copa[36][27].split("||"):
 # TERCEIRO LUGAR
 for sel2 in copa[22].split(" x "):
         paises_terceiro.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
 # time 1
 for jog in copa[36][28].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_terceiro[0][0:3].upper()
                 )
@@ -1177,7 +1185,7 @@ for jog in copa[36][28].split("||"):
 # time 2
 for jog in copa[36][29].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_terceiro[1][0:3].upper()
                 )
@@ -1185,11 +1193,12 @@ for jog in copa[36][29].split("||"):
 # FINAL
 for sel2 in copa[23].split(" x "):
         paises_final.append(
-                re.sub('[^a-zA-Z]+', '', sel2))
+                re.sub("[0-9|,'()]", '', sel2).strip())
+
 # time 1
 for jog in copa[36][30].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_final[0][0:3].upper()
                 )
@@ -1197,7 +1206,7 @@ for jog in copa[36][30].split("||"):
 # time 2
 for jog in copa[36][31].split("||"):
         autores_gols.append(
-                re.sub('[^a-zA-Z]+', '', jog) +
+                re.sub("[0-9|,'()]", '', jog.strip()).strip() +
                 " - " +
                 paises_final[1][0:3].upper()
                 )
@@ -1213,7 +1222,9 @@ tira_prorrog2 = []
 
 
 for sel3 in tira_prorrog:
-        sel3 = re.sub('Prorrogacao', '', sel3)
+        # print(sel3)
+        sel3 = re.sub(' Prorrogacao', '', sel3)
+        # print(sel3)
         tira_prorrog2.append(sel3)
 
 autores_gols += tira_prorrog2
@@ -1221,7 +1232,7 @@ autores_gols += tira_prorrog2
 autores_gols[:] = [x for x in autores_gols if "Prorrogacao" not in x]
 
 # layout
-sg.theme('Dark Brown 1')
+sg.theme('Dark Green 1')
 menu_principal = [
                  [sg.Text('\n\n\n',
                           size=(10000, 1),
@@ -1229,7 +1240,7 @@ menu_principal = [
                  [sg.Text('SIMULADOR DE COPA DO MUNDO',
                           size=(10000, 1),
                           justification='center', font=(ft, 25))],
-                 [sg.Text('v2.5',
+                 [sg.Text('V2.6       ',
                           size=(5, 2),
                           justification='center', font=(ft, 40))],
                  [sg.Radio('Resolução 1: 600x700', "RADIO1", default=False,
@@ -1245,14 +1256,14 @@ menu_principal = [
                  [sg.Text('\n\n\n',
                           size=(10000, 1),
                           justification='center', font=ft)],
-                 [sg.Text('Gustavo Albuquerque - V2.40: 05/2021 / 2.5: 10/2021',
+                 [sg.Text('Gustavo Albuquerque - V2.5: 10/2021 / V2.6: 06/2022',
                           size=(1000, 1),
                           justification='center', font=ft)],
 ]
 
 layout = menu_principal
 # janela
-janela = sg.Window('Simulador de Copa do Mundo V2.5', layout,
+janela = sg.Window('Simulador de Copa do Mundo V2.6', layout,
                    element_justification='c', size=(600,600))
 
 cabecalho = ['País', 'Pontos', 'G. F.', 'G. S.', 'S. G.']
@@ -1263,22 +1274,24 @@ while True:
         layout = [
             [sg.Text('Grupos Sorteados:',
                      font=ft)],
-            [sg.Text(sor_txt[0],
-                     justification='center', font=ft),
-             sg.Text(sor_txt[1],
-                     justification='center', font=ft),
-             sg.Text(sor_txt[2],
-                     justification='center', font=ft),
-             sg.Text(sor_txt[3],
-                     justification='center', font=ft)],
-            [sg.Text(sor_txt[4],
-                     justification='center', font=ft),
-             sg.Text(sor_txt[5],
-                     justification='center', font=ft),
-             sg.Text(sor_txt[6],
-                     justification='center', font=ft),
-             sg.Text(sor_txt[7],
-                     justification='center', font=ft)],
+            [sg.Table(sor_txt[0], headings=['GRUPO A'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(30,30), size=(8, 60), auto_size_columns=False),
+             sg.Table(sor_txt[1], headings=['GRUPO B'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False),
+             sg.Table(sor_txt[2], headings=['GRUPO C'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False),
+             sg.Table(sor_txt[3], headings=['GRUPO D'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False)],
+            [sg.Table(sor_txt[4], headings=['GRUPO E'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False),
+             sg.Table(sor_txt[5], headings=['GRUPO F'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False),
+             sg.Table(sor_txt[6], headings=['GRUPO G'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False),
+             sg.Table(sor_txt[7], headings=['GRUPO H'], num_rows=4, hide_vertical_scroll=True, def_col_width=15,
+                     justification='center', font=ft, pad=(20,20), size=(8, 60), auto_size_columns=False)],
+             [sg.Text('_________________________________________',
+                     font=ft, justification='center', pad=(10,30))],
             [sg.Button('Continuar!')]
         ]
         if valores["RES1"] is True:
@@ -1291,7 +1304,7 @@ while True:
                 tam = "tela cheia"
                 
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                            layout, element_justification='c', size=tam)
     if eventos == sg.WINDOW_CLOSED:
         break
@@ -1313,7 +1326,7 @@ while True:
             [sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Próximo':
@@ -1336,7 +1349,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Voltar':
@@ -1361,7 +1374,7 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Próximo')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                                layout, element_justification='c', size=tam)
 
     if i == 7:
@@ -1382,7 +1395,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Oitavas')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Oitavas':
@@ -1396,12 +1409,12 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
         ]
         janela.close()
-        janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+        janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                            layout, element_justification='c', size=tam)
 
     if eventos == 'Avançar':
         if j == 8:
-            topo2 = 'Fim da Simulação! - Gustavo Albuquerque 10/2021'
+            topo2 = 'Fim da Simulação! - Gustavo Albuquerque - 10/2021 / 06/2022'
             layout = [
                 [sg.Text(topo2, size=(100, 2), justification='center',
                          font=ft)],
@@ -1442,9 +1455,9 @@ while True:
                 [sg.Text(paises_terceiro[0] + " X " + paises_terceiro[1],
                          size=(100, 1), justification='center',
                          font=ft)],
-                [sg.Text(copa[33][0] + " ficou na terceira colocacao!",
+                [sg.Text(copa[33][0] + " ficou na terceira colocação!",
                          size=(100, 1), justification='center',
-                         font=(ft, 15), text_color="Brown")],
+                         font=(ft, 15), text_color="Red")],
                 [sg.Text("______________________________________________________",
                          size=(100, 1), justification='center',
                          font=ft, text_color="White")],
@@ -1467,7 +1480,7 @@ while True:
                 [sg.Button('Voltar'), sg.Text('      '), sg.Button('Fim')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                                layout,
                                element_justification='c', size=tam)
 
@@ -1502,7 +1515,7 @@ while True:
             [sg.Button('Voltar'), sg.Text('      '), sg.Button('Avançar')]
             ]
             janela.close()
-            janela = sg.Window('Simulador de Copa do Mundo Beta V2.5',
+            janela = sg.Window('Simulador de Copa do Mundo Beta V2.6',
                                layout, element_justification='c', size=tam)
         
         else:
@@ -1522,4 +1535,4 @@ while True:
     if eventos == 'Fim':
         janela.close()
 
-print('Código por Gustavo Albuquerque - 10/2021')
+print('Código por Gustavo Albuquerque - 10/2021 / 06/2022')
